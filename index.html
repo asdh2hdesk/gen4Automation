@@ -14,13 +14,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title> ETE Robotics</title>
+  <title> ASD - Gen4 - SOM</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="https://www.eterobotics.in/assets/img/favicon.png" rel="icon">
-  <!-- <link href="https://www.eterobotics.in/assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <link href="assets/favicon_io/android-chrome-192x192.png" rel="icon">
+  <!-- <link href="assets/favicon_io/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,24 +30,23 @@
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css"
-    rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://www.eterobotics.in/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="https://www.eterobotics.in/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="https://www.eterobotics.in/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Variables CSS Files. Uncomment your preferred color scheme -->
-  <link href="https://www.eterobotics.in/assets/css/variables.css" rel="stylesheet">
-  <!-- <link href="https://www.eterobotics.in/assets/css/variables-blue.css" rel="stylesheet"> -->
-  <!-- <link href="https://www.eterobotics.in/assets/css/variables-green.css" rel="stylesheet"> -->
-  <link href="https://www.eterobotics.in/assets/css/variables-orange.css" rel="stylesheet">
-  <!-- <link href="https://www.eterobotics.in/assets/css/variables-purple.css" rel="stylesheet"> -->
-  <!-- <link href="https://www.eterobotics.in/assets/css/variables-red.css" rel="stylesheet"> -->
-  <!-- <link href="https://www.eterobotics.in/assets/css/variables-pink.css" rel="stylesheet"> -->
+  <link href="assets/css/variables.css" rel="stylesheet">
+  <!-- <link href="assets/css/variables-blue.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-green.css" rel="stylesheet"> -->
+  <link href="assets/css/variables-orange.css" rel="stylesheet">
+  <!-- <link href="assets/css/variables-purple.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-red.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
 
   <!-- Template Main CSS File -->
-  <link href="https://www.eterobotics.in/assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: HeroBiz - v2.4.0
@@ -67,21 +66,53 @@
   <!-- End Google Tag Manager (noscript) -->
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top" data-scrollto-offset="0">
-    <div class="container-fluid d-flex align-items-center justify-content-between bg-white">
+  <div>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top" data-scrollto-offset="0">
+      <div class="container-fluid d-flex align-items-center justify-content-between bg-white">
 
-      <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="https://www.eterobotics.in/assets/img/favicon.png" alt=""><br>
-        <!-- <h1>HeroBiz<span>.</span></h1> -->
-      </a>
+        <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <div id="rotating-logos" style="height: 100px; position: relative;">
+            <img src="assets/img/logo/asd.png" alt="" class="logo-img"
+              style="position: absolute; opacity: 0; transition: opacity 0.3s;">
+            <img src="assets/img/logo/gen4auto.jpeg" alt="" class="logo-img"
+              style="position: absolute; opacity: 0; transition: opacity 0.3s;">
+            <img src="assets/img/logo/som.jpeg" alt="" class="logo-img"
+              style="position: absolute; opacity: 0; transition: opacity 0.3s;">
+          </div>
+
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              const logos = document.querySelectorAll('.logo-img');
+              let currentIndex = 0;
+
+              function showNextLogo() {
+                // Hide all logos
+                logos.forEach(logo => logo.style.opacity = '0');
+
+                // Show current logo
+                logos[currentIndex].style.opacity = '1';
+
+                // Move to next logo
+                currentIndex = (currentIndex + 1) % logos.length;
+              }
+
+              // Show first logo immediately
+              showNextLogo();
+
+              // Set interval for rotation
+              setInterval(showNextLogo, 3000);
+            });
+          </script>
+          <!-- <h1>HeroBiz<span>.</span></h1> -->
+        </a>
 
 
-      <nav id="navbar" class="navbar ">
-        <ul>
+        <nav id="navbar" class="navbar ">
+          <ul>
 
-          <!-- <li class="dropdown"><a href="#"><span>Home</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <!-- <li class="dropdown"><a href="#"><span>Home</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="index.html" class="active">Home 1 - index.html</a></li>
               <li><a href="index-2.html">Home 2 - index-2.html</a></li>
@@ -90,26 +121,25 @@
             </ul>
           </li> -->
 
-          <li><a class="nav-link scrollto" href="index.html#about" style="font-size:18px; color: #070178;">About</a>
-          </li>
-          <!-- <li><a class="nav-link scrollto" href="index.html#about" style="color:#4F74F6; font-size:18px;" >About</a></li> -->
+            <li><a class="nav-link scrollto" href="index.html#about" style="font-size:18px; color: #070178;">About</a>
+            </li>
+            <!-- <li><a class="nav-link scrollto" href="index.html#about" style="color:#4F74F6; font-size:18px;" >About</a></li> -->
 
-          <li><a class="nav-link scrollto" href="index.html#services" style="font-size:18px; color: #070178;">Product &
-              Services</a></li>
-          <!-- <li><a class="nav-link scrollto" href="https://www.hd-hyundairobotics.com" style="font-size:18px; color: #070178;" >Hyundai Robots</a></li> -->
-          <li><a class="nav-link scrollto" href="https://www.hd-hyundairobotics.com" target="_blank"
-              rel="noopener noreferrer" style="font-size:18px; color: #070178;">Hyundai Robots</a></li>
+            <li><a class="nav-link scrollto" href="index.html#services" style="font-size:18px; color: #070178;">Product
+                &
+                Services</a></li>
 
-          <!-- <li><a class="nav-link scrollto" href="index.html#services" style="color:#0e56ab; font-size:18px;" >Our Product & Services</a></li> -->
+            <!-- <li><a class="nav-link scrollto" href="index.html#services" style="color:#0e56ab; font-size:18px;" >Our Product & Services</a></li> -->
 
-          <li><a class="nav-link scrollto" href="index.html#facility"
-              style="font-size:18px; color: #070178;">Facility</a></li>
-          <li><a class="nav-link scrollto" href="index.html#cta" style="font-size:18px; color: #070178;">Top
-              Management</a></li>
-          <li><a class="nav-link scrollto" href="Gallery.html" style="font-size:18px; color: #070178;">Gallery</a></li>
+            <li><a class="nav-link scrollto" href="index.html#facility"
+                style="font-size:18px; color: #070178;">Facility</a></li>
+            <li><a class="nav-link scrollto" href="index.html#cta" style="font-size:18px; color: #070178;">Top
+                Management</a></li>
+            <li><a class="nav-link scrollto" href="Gallery.html" style="font-size:18px; color: #070178;">Gallery</a>
+            </li>
 
-          <!-- <li><a href="blog.html" style="font-size:18px; color: #09019f;">Blog</a></li> -->
-          <!-- <li class="dropdown megamenu"><a href="#"><span>Mega Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <!-- <li><a href="blog.html" style="font-size:18px; color: #09019f;">Blog</a></li> -->
+            <!-- <li class="dropdown megamenu"><a href="#"><span>Mega Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li>
                 <a href="#">Column 1 link 1</a>
@@ -133,7 +163,7 @@
               </li>
             </ul>
           </li> -->
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -150,36 +180,127 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li> -->
-          <li><a class="nav-link scrollto" href="index.html#contact" style="font-size:18px; color: #070178;">Contact</a>
-          </li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle d-none"></i>
-      </nav><!-- .navbar -->
+            <li><a class="nav-link scrollto" href="index.html#contact"
+                style="font-size:18px; color: #070178;">Contact</a>
+            </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle d-none"></i>
+        </nav><!-- .navbar -->
 
-      <a class="btn-getstarted bi bi-telephone scrollto" href="tel:+919990056299">+919990056299</a>
+        <a class="btn-getstarted bi bi-telephone scrollto" href="tel:+919990056299">+919990056299</a>
 
+      </div>
+    </header><!-- End Header -->
+  </div>
+
+  <section id="hero-animated"
+    class="hero-animated d-flex align-items-center bg-gradient-to-b from-[#ffffff] to-[var(--light-background-color)] lg:py-2 code-section">
+    <div class="container-fluid p-0">
+      <div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="3"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/img/banner/asd1.jpg" class="d-block w-100" alt="ASD Banner"
+              style="height: 100vh; object-fit: cover;">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/banner/gen4.jpg" class="d-block w-100" alt="Gen4 Banner"
+              style="height: 100vh; object-fit: cover;">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/banner/dem2.jpeg" class="d-block w-100" alt="Demo 2"
+              style="height: 100vh; object-fit: cover;">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/banner/demo1.jpg" class="d-block w-100" alt="Demo 1"
+              style="height: 100vh; object-fit: cover;">
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
-  </header><!-- End Header -->
-
-  <section id="hero-animated" class="hero-animated d-flex align-items-center">
-    <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
-      data-aos="zoom-out" ">
-     <!-- <img src=" https://www.eterobotics.in/assets/img/hero-carousel/hero-carousel-3.png"
-      class="img-fluid animated"> -->
-      <!-- <h2>Welcome to <br> <span>ETE Robotics</span> <br> Systems Integrator Pvt Ltd</h2> -->
-      <!-- <p>“Value Adding Solutions House”</p> -->
-      <!-- <div class="d-flex">
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
-      </div> -->
-      <!-- <h1 class="value blue" style="color:#070178;">“Value Adding Solutions House”</h1> -->
-
-    </div>
-
-
   </section>
-  <h1 class="value" style="color:#070178;">“Value Adding Solutions House”</h1>
 
+  <style>
+    #hero-animated {
+      padding: 0;
+      margin: 0;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .carousel-item {
+      height: 100vh;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      #hero-animated {
+        height: 100vh;
+      }
+
+      .carousel-item {
+        height: 100vh;
+      }
+
+      .carousel-item img {
+        object-fit: cover;
+      }
+    }
+  </style>
+
+  <div id="rotating-text-container" style="position: relative; height: 100px; text-align: center; margin-top: 20px;">
+    <h1 class="value rotating-text"
+      style="color:#070178; position: absolute; width: 100%; top: 50%; transform: translateY(-50%); opacity: 0; transition: opacity 1s;">
+      "Unified Solution for diverse needs"</h1>
+    <h1 class="value rotating-text"
+      style="color:#070178; position: absolute; width: 100%; top: 50%; transform: translateY(-50%); opacity: 0; transition: opacity 1s;">
+      "Achieving the Highest Automation with Economical Solutions"</h1>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const texts = document.querySelectorAll('#rotating-text-container .rotating-text');
+      let currentIndex = 0;
+
+      function showNextText() {
+        // Hide all texts
+        texts.forEach(text => text.style.opacity = '0');
+
+        // Show current text
+        texts[currentIndex].style.opacity = '1';
+
+        // Move to next text
+        currentIndex = (currentIndex + 1) % texts.length;
+      }
+
+      // Show first text immediately
+      showNextText();
+
+      // Set interval for rotation
+      setInterval(showNextText, 3000);
+    });
+  </script>
 
   <main id="main">
 
@@ -187,40 +308,383 @@
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>About Us</h2>
-          <p class="aboutp"><strong style="color:#e54d07;">ETE Robotic Systems Integrator Pvt Ltd</strong> is the
-            turnkey systems integrator providing complete supply & service support from facility planning, design,
-            manufacturing, production line set up, process validation and timely production start up as per quality
-            assurance in Domestic and Global Market.</p><br>
-          <p class="aboutp"> <strong style="color:#e54d07;"> ETE Robotics</strong> is latest technology driven company
-            and had collaboration with <a href="https://www.ttech.to.it/" style="color: red;">TTECH</a> Italy for
-            testing line and ensuring best in class product & service delivery in Industry.
-          </p><br>
-          <p class="aboutp"><strong style="color:#e54d07;">ETE Robotics </strong>is having state of art manufacturing
-            facility & well equipped with latest design software including highly skilled team.<br>The Facility was
-            established in 2017 in Gurgaon, Haryana.
+      <div class="container">
+        <!-- Header Section -->
+        <div class="section-header text-center">
+          <span class="badge bg-primary mb-3">Transformative Solutions</span>
+          <h2 class="mb-4">Revolutionize Your Manufacturing Operations with Unified Excellence</h2>
+          <p class="lead">
+            Experience unparalleled efficiency and compliance in your manufacturing with our innovative cloud-based QMS and ERP solutions, ensuring ISO 9001 and IATF 16949 adherence while driving you forward in Industry 4.0.
           </p>
-
-          <br>
-          <h3 class="h5ceo" style="text-decoration: underline;font-style: italic;"> "Technology partners <a
-              href="https://www.ttech.to.it/" style="color: red;">TTECH</a> Italy " </h3>
-
-
-          <!-- Paste all the turnkey data from notes (Turnkey)or from root folder Turnkey.txt here -->
-
-
         </div>
-
+      
+        <!-- Cards Section -->
+        <div class="row g-4 mt-4">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body p-4">
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/man-working-on-industrial-automation-with-robots-14833741-11972151.png" 
+                     alt="Industrial Automation Illustration" 
+                     class="img-fluid mb-4" 
+                     style="height: 200px; object-fit: contain;">
+                <span class="badge bg-dark mb-3">ASD Support System</span>
+                <h4 class="card-title mb-3">Streamlined Compliance Solutions</h4>
+                <p class="card-text">
+                  A cutting-edge, cloud-based Quality Management
+            System (QMS) and Enterprise Resource Planning (ERP) solution designed to ensure industrial compliance and
+            operational excellence. Our focus is on seamless integration with ISO 9001, IATF 16949 standards, and
+            Industry 4.0 principles, empowering businesses to achieve peak performance and regulatory adherence.
+                    </p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Card 2 -->
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body p-4">
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/man-working-on-industrial-automation-with-robots-14833741-11972151.png" 
+                     alt="Automation Engineer" 
+                     class="img-fluid mb-4" 
+                     style="height: 200px; object-fit: contain;">
+                <span class="badge bg-dark mb-3">Gen4 Automation</span>
+                <h4 class="card-title mb-3">Optimized Automation Solutions</h4>
+                <p class="card-text">
+                  Delivering high-performance and cost-effective
+            automation solutions tailored to modern industrial demands. We specialize in designing and implementing
+            advanced machinery, precision tooling, and sophisticated SCADA systems, driving efficiency and innovation
+            across various sectors.
+                    </p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Card 3 -->
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body p-4">
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/man-working-on-industrial-automation-with-robots-14833741-11972151.png" 
+                     alt="Precision Manufacturing Illustration" 
+                     class="img-fluid mb-4" 
+                     style="height: 200px; object-fit: contain;">
+                <span class="badge bg-dark mb-3">Som Precision</span>
+                <h4 class="card-title mb-3">Integrated Precision Technology</h4>
+                <p class="card-text">
+                  Committed to empowering businesses with cutting-edge
+            technology that enhances productivity, optimizes resource utilization, and fosters sustainable growth. Our
+            solutions are crafted with a focus on affordability and simplicity, ensuring that advanced precision
+            technology is accessible and easy to integrate for all our clients.    </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      
+      
+    </section>
 
-      </div>
+    <style>
+    /* About Section Styles */
+    .about {
+      padding: 60px 0;
+      background-color: #f8f9fa;
+    }
 
-      </div>
+    .about .section-header {
+      margin-bottom: 40px;
+    }
+
+    .about .badge {
+      font-size: 1rem;
+      padding: 8px 16px;
+      border-radius: 30px;
+    }
+
+    .about .card {
+      border: none;
+      border-radius: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .about .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .about .card-body {
+      padding: 2rem;
+    }
+
+    .about .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .about .card-text {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .about .aboutp {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .about {
+        padding: 40px 0;
+      }
+      
+      .about .card {
+        margin-bottom: 20px;
+      }
+      
+      .about .card-title {
+        font-size: 1.3rem;
+      }
+      
+      .about .aboutp {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .about .section-header h2 {
+        font-size: 1.8rem;
+      }
+      
+      .about .card-body {
+        padding: 1.5rem;
+      }
+    }
+    </style>
+
+      
 
 
+      <!-- ======= Transform Section ======= -->
+      <section class="transform-section">
+        <div class="container">
+          <div class="section-header text-center mb-5">
+            <h1 class="display-4 fw-bold mb-4">Transform Your Business with Integrated Industrial Excellence</h1>
+            <p class="lead">Experience the future of industrial operations with ASD Support System Private Limited.</p>
+          </div>
+
+          <div class="transform-cards">
+            <div class="transform-card" data-tilt>
+              <div class="card-content">
+                <div class="card-front">
+                  <div class="icon-wrapper">
+                    <i class="bi bi-shield-check"></i>
+                  </div>
+                  <h3>ISO/IATF Compliance</h3>
+                </div>
+                <div class="card-back">
+                  <h3>ISO/IATF Compliance</h3>
+                  <p>Ensuring quality and reliability in all operations with advanced compliance monitoring and automated quality control systems.</p>
+                  <div class="card-features">
+                    <span>Quality Management</span>
+                    <span>Compliance Monitoring</span>
+                    <span>Automated Controls</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="transform-card" data-tilt>
+              <div class="card-content">
+                <div class="card-front">
+                  <div class="icon-wrapper">
+                    <i class="bi bi-graph-up-arrow"></i>
+                  </div>
+                  <h3>Real-Time Traceability</h3>
+                </div>
+                <div class="card-back">
+                  <h3>Real-Time Traceability</h3>
+                  <p>Monitor your operations effortlessly with advanced SCADA systems and real-time data analytics.</p>
+                  <div class="card-features">
+                    <span>Live Monitoring</span>
+                    <span>Data Analytics</span>
+                    <span>Performance Tracking</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="transform-card" data-tilt>
+              <div class="card-content">
+                <div class="card-front">
+                  <div class="icon-wrapper">
+                    <i class="bi bi-boxes"></i>
+                  </div>
+                  <h3>Scalable Solutions</h3>
+                </div>
+                <div class="card-back">
+                  <h3>Scalable Solutions</h3>
+                  <p>Unlock the potential of intelligent and adaptable platforms tailored to your specific needs.</p>
+                  <div class="card-features">
+                    <span>Custom Solutions</span>
+                    <span>Flexible Scaling</span>
+                    <span>Future-Ready</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <style>
+      .transform-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 100px 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .transform-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('assets/img/images/publicContain.webp') center/cover;
+        opacity: 0.1;
+        z-index: 0;
+      }
+
+      .transform-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .transform-card {
+        perspective: 1500px;
+        height: 400px;
+      }
+
+      .card-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .transform-card:hover .card-content {
+        transform: rotateY(180deg);
+      }
+
+      .card-front, .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 20px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .card-front {
+        background: var(--primary-color);
+        color: var(--primary-button-text-color);
+      }
+
+      .card-back {
+        background: white;
+        transform: rotateY(180deg);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      }
+
+      .icon-wrapper {
+        width: 80px;
+        height: 80px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .icon-wrapper i {
+        font-size: 2.5rem;
+        
+      }
+
+      .card-front h3 {
+        font-size: 1.8rem;
+        margin: 0;
+        font-weight: 600;
+      }
+
+      .card-back h3 {
+        color: var(--primary-color);
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+
+      .card-back p {
+        color: #666;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
+      .card-features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
+
+      .card-features span {
+        background: rgba(var(--primary-color-rgb), 0.1);
+        color: var(--primary-color);
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 991px) {
+        .transform-cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 767px) {
+        .transform-cards {
+          grid-template-columns: 1fr;
+        }
+        
+        .transform-card {
+          height: 350px;
+        }
+      }
+      </style>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        VanillaTilt.init(document.querySelectorAll(".transform-card"), {
+          max: 15,
+          speed: 400,
+          glare: true,
+          "max-glare": 0.2,
+        });
+      });
+      </script>
 
       <!-- ======= Featured Services Section ======= -->
       <section id="featured-services" class="featured-services">
@@ -232,8 +696,8 @@
               <div class="service-item position-relative">
                 <div class="icon"><i class="bi bi-eye"></i></div>
                 <h4><a href="" class="stretched-link">Vision</a></h4>
-                <p>To be a global benchmark in providing innovative & optimized solutions for Robotics applications,
-                  Assembly line & Automations with keeping highest satisfaction level of stake holders</p>
+                <p>To be a leading global innovator in providing compliant, efficient, and cost-effective automation and
+                  precision solutions, setting new benchmarks for industrial excellence.</p>
               </div>
             </div><!-- End Service Item-->
 
@@ -241,8 +705,9 @@
               <div class="service-item position-relative">
                 <div class="icon"><i class="bi bi-rocket"></i></div>
                 <h4><a href="" class="stretched-link">Mission</a></h4>
-                <p>To deliver highest quality "product & services" consistently,combined with trusted client partnership
-                  through global best practices adaptation & timely execution</p>
+                <p>To empower industries with advanced cloud-based QMS/ERP systems, high-performance automation, and
+                  accessible precision technologies, consistently driving productivity, optimizing resources, and
+                  ensuring compliance.</p>
               </div>
             </div><!-- End Service Item-->
 
@@ -250,20 +715,20 @@
               <div class="service-item position-relative">
                 <div class="icon"><i class="bi bi-bullseye"></i></div>
                 <h4><a href="" class="stretched-link">Objective</a></h4>
-                <p>To build professional & highly competitive organization for Robotic applications & Turnkey Systems
-                  Integration & Automations & making profitable center by 2023 with securing 50% Revenue from Global
-                  Market</p>
+                <p>To deliver cutting-edge, affordable, and user-friendly solutions that enable businesses to enhance
+                  operational efficiency, achieve regulatory adherence, and foster sustainable growth across diverse
+                  industrial landscapes.</p>
               </div>
             </div><!-- End Service Item-->
 
             <!-- <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="600">
-              <div class="service-item position-relative">
-                <div class="icon"><i class="bi bi-broadcast icon"></i></div>
-                <h4><a href="" class="stretched-link">Nemo Enim</a></h4>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-              </div>
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-broadcast icon"></i></div>
+              <h4><a href="" class="stretched-link">Nemo Enim</a></h4>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
             </div>
-            <!-- End Service Item-->
+          </div>
+          <!-- End Service Item-->
 
           </div>
 
@@ -275,139 +740,301 @@
       <!-- ======= Services Section ======= -->
       <section id="services" class="services">
         <div class="container" data-aos="fade-up">
-
-          <div class="section-header">
-            <h2>Our Product and Services</h2>
-            <!-- <p>ETE Robotic Systems Integrator Pvt Ltd is the turnkey systems integrator providing complete supply & service support from facility planning, design, manufacturing, production line set up, process validation and timely production start up as per quality assurance in Domestic and Global Market.</p> -->
+          <div class="section-header text-center mb-5">
+            <div class="section-title-wrapper">
+              <span class=" badge bg-primary section-subtitle">What We Offer</span>
+              <h2 class="section-title">Our Products & Services</h2>
+              <p>Innovative solutions designed to transform your business operations, our products and services empower organizations to streamline workflows, enhance customer experiences, boost productivity, and drive sustainable growth through cutting-edge technology and tailored strategies.</p>
+              <div class="title-separator"></div>
+            </div>
           </div>
 
-          <div class="row gy-5">
-
-            <div class="col-xl-3 col-lg-6 col-md-6 col-md-12" data-aos="zoom-in" data-aos-delay="200">
-              <div class="service-item">
-                <div class="img">
-                  <img src="https://www.eterobotics.in/assets/img/turnkey.jpeg" class="img-fluid imgthumb" alt="">
-                </div>
-                <div class="details position-relative">
-                  <div class="icon">
-                    <i class="bi bi-activity"></i>
+          <div class="row g-4">
+            <!-- ASD Software Card -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="service-icon">
+                      <i class="bi bi-activity"></i>
+                    </div>
+                    <div class="service-image">
+                      <img src="assets/img/images/Picture3.png" alt="ASD Software">
+                    </div>
+                    <h3>ASD Software: Cloud-Based Solutions
+</h3>
                   </div>
-
-                  <h3>Turnkey Solutions</h3>
-
-
-
-
-                  <ul>
-                    <!-- <li>Green Field Projects</li> -->
-                    <li>Assembly lines </li>
-                    <li>Power train Assembly lines</li>
-                    <li>Robotic Applications-BIW | Tending | Palletizing | Gluing
-
-                    </li>
-                    <li>Warehouse Automations</li>
-                    <li>Special Purpose Machines</li>
-                    <li>Customize Applications</li>
-                  </ul>
-
-
-
-
-
+                  <div class="flip-card-back">
+                    <h4>ASD Software Solutions</h4>
+                    <ul class="feature-list">
+                      <li><i class="bi bi-check2-circle"></i> QMS + ERP Modules</li>
+                      <li><i class="bi bi-check2-circle"></i> CAPA & Audit Systems</li>
+                      <li><i class="bi bi-check2-circle"></i> HR & Inventory Management</li>
+                      <li><i class="bi bi-check2-circle"></i> SCADA Integration</li>
+                      <li><i class="bi bi-check2-circle"></i> ISO Standardization</li>
+                      <li><i class="bi bi-check2-circle"></i> Mobile Applications</li>
+                    </ul>
+                    <a href="#contact" class="flip-btn">Learn More</a>
+                  </div>
                 </div>
               </div>
-            </div><!-- End Service Item -->
+            </div>
 
-            <div class="col-xl-3 col-lg-6 col-md-6 col-md-12" data-aos="zoom-in" data-aos-delay="300">
-              <div class="service-item">
-                <div class="img">
-                  <img src="https://www.eterobotics.in/assets/img/testing.jpeg" class="img-fluid imgthumb" alt="">
-                </div>
-                <div class="details position-relative">
-                  <div class="icon">
-                    <i class="bi bi-broadcast"></i>
+            <!-- Gen4Automation Card -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="service-icon">
+                      <i class="bi bi-broadcast"></i>
+                    </div>
+                    <div class="service-image">
+                      <img src="assets/img/images/Picture4.png" alt="Gen4Automation">
+                    </div>
+                    <h3>Gen4Automation: Innovative Automation Systems
+</h3>
                   </div>
-
-                  <h3>Testing Solutions</h3>
-
-
-                  <ul>
-                    <li>EOL functional test line</li>
-                    <li> E- mobility-Electric Vehicle | Hybrid Vehicle</li>
-                    <li> Power train products testing</li>
-                    <li>Leak testing </li>
-                    <li> Sensor Calibration</li>
-                    <li>Customize Application testing</li>
-                  </ul>
-
+                  <div class="flip-card-back">
+                    <h4>Automation Excellence</h4>
+                    <ul class="feature-list">
+                      <li><i class="bi bi-check2-circle"></i> Special Purpose Machines</li>
+                      <li><i class="bi bi-check2-circle"></i> Servo-Based Systems</li>
+                      <li><i class="bi bi-check2-circle"></i> Advanced Packaging Solutions</li>
+                      <li><i class="bi bi-check2-circle"></i> Precision Laser Marking</li>
+                      <li><i class="bi bi-check2-circle"></i> Robust Machine Design</li>
+                    </ul>
+                    <a href="#contact" class="flip-btn ">Learn More</a>
+                  </div>
                 </div>
               </div>
-            </div><!-- End Service Item -->
+            </div>
 
-            <div class="col-xl-3 col-lg-6 col-md-6 col-md-12" data-aos="zoom-in" data-aos-delay="400">
-              <div class="service-item">
-                <div class="img">
-                  <img src="https://www.eterobotics.in/assets/img/ev.jpeg" class="img-fluid imgthumb" alt="">
-                </div>
-                <div class="details position-relative">
-                  <div class="icon">
-                    <i class="bi bi-easel"></i>
+            <!-- Som Services Card -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div class="service-icon">
+                      <i class="bi bi-easel"></i>
+                    </div>
+                    <div class="service-image">
+                      <img src="assets/img/images/Picture5.png" alt="Som Services">
+                    </div>
+                    <h3>Som Precisions: Engineering & Lifecycle Services
+</h3>
                   </div>
-
-                  <h3>Latest Technology Transfers </h3>
-
-
-                  <ul>
-                    <li>Technology Transfer from Abroad & Setup</li>
-                    <li>Green Project Planning & facility set up</li>
-                    <li>Touchless -Vision System Based | AI </li>
-                    <li>MES | SCADA | iOT | i-4.0</li>
-                    <li>Lean | Continual Improvements</li>
-
-                  </ul>
-
+                  <div class="flip-card-back">
+                    <h4>Comprehensive Services</h4>
+                    <ul class="feature-list">
+                      <li><i class="bi bi-check2-circle"></i> Plant AMC Services</li>
+                      <li><i class="bi bi-check2-circle"></i> System Retrofitting</li>
+                      <li><i class="bi bi-check2-circle"></i> Re-engineering Solutions</li>
+                      <li><i class="bi bi-check2-circle"></i> Professional Design Services</li>
+                    </ul>
+                    <a href="#contact" class="flip-btn">Learn More</a>
+                  </div>
                 </div>
               </div>
-            </div><!-- End Service Item -->
-
-            <div class="col-xl-3 col-lg-6 col-md-6 col-md-12" data-aos="zoom-in" data-aos-delay="400">
-              <div class="service-item">
-                <div class="img">
-                  <img src="https://www.eterobotics.in/assets/img/BendingXpert.jpg" class="img-fluid imgthumb" alt="">
-                </div>
-                <div class="details position-relative">
-                  <div class="icon">
-
-                    <i class="bi bi-x-diamond"></i>
-
-                  </div>
-
-                  <h3>ER Bending Xpert</h3>
-
-
-                  <ul>
-                    <li>Best in class Quality</li>
-                    <li>Industrial PC with touch screen</li>
-                    <li>Android | window based app</li>
-                    <li>Comptiable with MES | i-4.0</li>
-                    <li>3D Freeform Bending</li>
-                    <li>IGES data translator</li>
-                    <li>Easy programing</li>
-                    <li>Single Stroke Bending</li>
-                    <li>Full CNC Control</li>
-
-                  </ul>
-
-                </div>
-              </div>
-            </div><!-- End Service Item -->
-
-
-
+            </div>
           </div>
-
         </div>
-      </section><!-- End Services Section -->
+      </section>
+
+      <style>
+      .services {
+        padding: 100px 0;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        position: relative;
+        overflow: hidden;
+      }
+      .services .badge {
+      font-size: 1rem;
+      padding: 8px 16px;
+      border-radius: 30px;
+    }
+
+      .section-title-wrapper {
+        position: relative;
+        margin-bottom: 50px;
+      }
+
+      /* .section-subtitle {
+        color: var(--primary-color);
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        display: block;
+        margin-bottom: 10px;
+      } */
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #070178;
+        margin-bottom: 20px;
+      }
+
+      .title-separator {
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-color), #070178);
+        margin: 0 auto;
+        border-radius: 2px;
+      }
+
+      .flip-card {
+        background-color: transparent;
+        width: 100%;
+        height: 400px;
+        perspective: 1000px;
+        margin-bottom: 30px;
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        border-radius: 20px;
+      }
+
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .flip-card-front {
+        background-color: white;
+        color: #070178;
+      }
+
+      .flip-card-back {
+        background-color: white;
+        color: #333;
+        transform: rotateY(180deg);
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .service-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background: var(--primary-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        transition: all 0.4s ease;
+      }
+
+      .service-icon i {
+        font-size: 1.8rem;
+        color: white;
+      }
+
+      .service-image {
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .service-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+      }
+
+      .flip-card:hover .service-image img {
+        transform: scale(1.1);
+      }
+
+      .flip-card-front h3 {
+        padding: 20px;
+        margin: 0;
+        font-size: 1.5rem;
+        color: #070178;
+        text-align: center;
+      }
+
+      .flip-card-back h4 {
+        color: #070178;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+        text-align: left;
+      }
+
+      .feature-list li {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        color: #333;
+        font-size: 1rem;
+      }
+
+      .feature-list li i {
+        margin-right: 10px;
+        color: var(--primary-color);
+        font-size: 1.2rem;
+      }
+
+      .flip-btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background: #070178;
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: 2px solid var(--primary-color);
+        margin-top: auto;
+      }
+
+      .flip-btn:hover {
+        background: transparent;
+        color: var(--primary-color);
+      }
+
+      @media (max-width: 768px) {
+        .flip-card {
+          height: 350px;
+        }
+        
+        .service-image {
+          height: 150px;
+        }
+        
+        .section-title {
+          font-size: 2rem;
+        }
+      }
+      </style>
 
       <!-- ================END OF OUR SERVICES================ -->
 
@@ -420,875 +1047,714 @@
 
           <div class="section-header">
             <h2>Our Facility</h2>
-            <!-- <p>ETE Robotic Systems Integrator Pvt Ltd is the turnkey systems integrator providing complete supply & service support from facility planning, design, manufacturing, production line set up, process validation and timely production start up as per quality assurance in Domestic and Global Market.</p> -->
+            <!-- <p>ETE Robotic Systems Integrator Pvt Ltd is the turnkey systems integrator providing complete supply & service support from facility planning, design, manufacturing, production line set up, process validation and timely production start up as per quality assurance in Domestic and Global Market.</p> -->
           </div>
 
           <div class="row gy-5">
 
-            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="col-xl-6 col-md-6" data-aos="zoom-in" data-aos-delay="200">
               <div class="service-item">
-                <!-- <div class="img">
-            <img src="https://www.eterobotics.in/assets/img/360.png" class="img-fluid size" alt="">
-          </div> -->
                 <div class="det details position-relative">
-                  <!-- <div class="icon">
-              <i class="bi bi-activity"></i>
-            </div> -->
-
-                  <h3 class="t-center">Design & Simulation</h3>
-
-                  <div class="img">
-                    <img src="https://www.eterobotics.in/assets/img/360.png" class="img-fluid size" alt="">
+                  <h3 class="t-center">ASD: Cloud-Based SaaS Infrastructure</h3>
+                  <div class="rotating-facility-images" style="position: relative; height: 200px; overflow: hidden;">
+                    <img src="assets/img/images/Picture6.png" class="img-fluid facility-img" alt=""
+                      style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
+                    <img src="assets/img/images/Picture7.png" class="img-fluid facility-img" alt=""
+                      style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
                   </div>
-
-                  <p>
-
-
-                  <ul class="fac_list">
-
-                    <li> Highly Experienced & Professional team </li>
-                    <li>World Best in class PLM Software -3D experience -Dassault Systems </li>
-                    <li> Solid Works & CATIA</li>
-                    <li> RFQ Management & Control </li>
-                    <li> Engineering Data Management </li>
-                    <li>BOM creation Automatically </li>
-                    <li> Electronic communication to respective Function</li>
-                    <li> Online Project Management & escalation </li>
-                    <li> ECN Management </li>
-                    <li> Shop Floor Drawings </li>
-                    <li>Service & Customer feedback record and online monitoring system </li>
-
-
-                  </ul>
-
-
-
-
+                  <p style="text-align: justify; margin-bottom: 15px;">
+                    ASD leverages a robust, cloud-based SaaS infrastructure, ensuring high availability, scalability,
+                    and security for all software solutions. Our agile development and dedicated support teams
+                    continuously improve our platforms, focusing on user-centric design and cutting-edge technology for
+                    QMS and ERP systems.
+                  </p>
+                  <p style="text-align: justify;">
+                    This infrastructure efficiently handles large data volumes, providing real-time insights essential
+                    for industrial compliance and Industry 4.0, delivering flexible, responsive, and secure software
+                    environments that adapt to evolving manufacturing needs.
                   </p>
                 </div>
               </div>
             </div><!-- End Service Item -->
 
-            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="col-xl-6 col-md-6" data-aos="zoom-in" data-aos-delay="300">
               <div class="service-item">
-                <!-- <div class="img">
-            <img src="https://www.eterobotics.in/assets/img/testing.jpeg" class="img-fluid" alt="">
-          </div> -->
                 <div class="det details position-relative">
-                  <!-- <div class="icon">
-              <i class="bi bi-broadcast"></i>
-            </div> -->
-
-                  <h3 class="t-center">Controls</h3>
-
-                  <div class="img">
-                    <img src="https://www.eterobotics.in/assets/img/control.png" class="i-center img-fluid" alt="">
+                  <h3 class="t-center">Gen4 Automation: Innovative Automation Solutions</h3>
+                  <div class="rotating-facility-images" style="position: relative; height: 200px; overflow: hidden;">
+                    <img src="assets/img/images/Picture8.png" class="img-fluid facility-img" alt=""
+                      style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
+                    <img src="assets/img/images/Picture9.png" class="img-fluid facility-img" alt=""
+                      style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
                   </div>
-                  <p>
-                  <ul class="fac_list">
-                    <li>Highly Experienced Team </li>
-                    <li> Electrical Design Software </li>
-                    <li> PLC Logic | Programming</li>
-                    <li>MES Software | Interface </li>
-                    <li> SCADA Software | Interface</li>
-                    <li>Touch Less Inspection Software | Interface</li>
-                    <li>Traceability Interface – RFID | Laser</li>
-                    <li> iOT | i4.0 Interface </li>
-                    <li> CNC Pipe Bending Software | Interface </li>
-                    <li> Robotic-Offline Programming | Online Programming </li>
-                    <li> PLC panel | Hardware </li>
-                    <li> Siemens | Mitsubishi | Omron | Delta | AB </li>
-
-
-                  </ul>
+                  <p style="text-align: justify; margin-bottom: 15px;">
+                    Gen4 Automation is dedicated to revolutionizing industries by delivering innovative,
+                    high-performance automation solutions that are accessible, cost-effective, and sustainable. Our goal
+                    is to empower businesses with cutting-edge technology that enhances productivity, optimizes
+                    resources, and drives growth while maintaining affordability and simplicity.
+                  </p>
+                  <p style="text-align: justify;">
+                    We envision a future where advanced automation becomes a cornerstone of efficiency, accessible to
+                    enterprises of all sizes.
                   </p>
                 </div>
               </div>
             </div><!-- End Service Item -->
-
-            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-              <div class="service-item">
-                <!-- <div class="img">
-            <img src="https://www.eterobotics.in/assets/img/tt.jpeg" class="img-fluid" alt="">
-          </div> -->
-                <div class="det details position-relative">
-                  <!-- <div class="icon">
-              <i class="bi bi-easel"></i>
-            </div> -->
-
-                  <h3 class="t-center">Facility </h3>
-
-                  <div class="img">
-                    <img src="https://www.eterobotics.in/assets/img/fac.png" class="i-center fac img-fluid" alt="">
-                  </div>
-
-                  <p>
-
-                  <ul class="fac_list">
-
-                    <!--
-              <li> Metrology-CMM | Standard Tools</li>
-              <li> High End Fabrication Shop-TIG | MIG</li>
-              <li> Machine Shop-VMC | Tool Room</li>
-              <li> Assy Shop</li>
-              <li> EOL Testing </li>
-              <li>  Material Handling Equipment</li>
-              <li> Panel Building Cell</li>
-              <li> Zonal Offices- Ahmedabad | Haridwar | Belgaum</li>
-              <li> Mfg hand on experienced team </li>
-              <li> Dedicated Service Team </li>
-              <li> Dedicated Project team</li>
-              <li> Dedicated Sales Team</li>
-              <li>More Than 30,000 Sqft Area (Existing Future)  </li>
-              -->
-
-                    <LI> Metrology-CMM | Standard Tools </li>
-                    <li>High End Fabrication Shop-TIG | MIG | Laser Welding</li>
-                    <li>Press Shop- Laser Cutting | CNC Bending </li>
-                    <li>Machine Shop-VMC | HMC | TMC | Tool Room</li>
-                    <li>Assy Shop- Tools | Lifting Tools</li>
-                    <li>Surface Treatment- Automatic Paint Shop with PT line | Powder Coating Facility | Shot Blasting |
-                      Electroless Plating</li>
-                    <li>EOL Testing- Electrical | Hydraulic | Load Vs Stroke</li>
-                    <li>Material Handling Equipment</li>
-                    <li>Utility Equipment</li>
-
-
-
-                  </ul>
-                  </p>
-
-                </div>
-              </div>
-
-
-            </div><!-- End Service Item -->
-            <h3 class="h5ceo" style="text-decoration: underline;font-style: italic;"> “Largest Manufacturing Set up in
-              Segment – North India" </h3>
-
 
           </div>
 
         </div>
       </section><!-- End Services Section -->
 
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelectorAll('.rotating-facility-images').forEach(container => {
+            const images = container.querySelectorAll('.facility-img');
+            let currentIndex = 0;
+
+            function showNextImage() {
+              images.forEach(img => img.style.opacity = '0');
+              images[currentIndex].style.opacity = '1';
+              currentIndex = (currentIndex + 1) % images.length;
+            }
+
+            showNextImage();
+            setInterval(showNextImage, 3000);
+          });
+        });
+      </script>
 
       <!-- ========================END OF NEW SERRVICE==================== -->
 
 
-      <!-- ============ experimental area starts ============================= -->
-
-      <!-- <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Card 1</h5>
-            <p class="card-text">This is the content of Card 1.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Card 2</h5>
-            <p class="card-text">This is the content of Card 2.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Card 3</h5>
-            <p class="card-text">This is the content of Card 3.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-
-      <!-- ============ experimental area END ============================= -->
-
-
-
-
-
-
-
-      <!-- <div class="turnkey">
-      <img src="https://www.eterobotics.in/assets/img/turnkey.png" class="img-fluid" alt="">
-    </div> -->
-
-
-      <!-- <div class="turnkey jumbotron jumbotron-fluid">
-  <div class="container">
-    <h3 class="display-4">Turnkey</h3>
-       <img src="https://www.eterobotics.in/assets/img/turnkey.png" class="img-fluid" alt="">
-      </div>
-</div> -->
-
-
-
-      <!-- <section id="turnkey" class="turnkey">
-<div class="turnkey container-xl">
-<h2>Full Turnkey Project Cycle</h2>
-
-    </section>
-
-
-
-
-    <div class="container-fluid tkdiv">
-      <div class="row">
-        <div class="col-md-6 col-md-6 " >
-          <img src="https://www.eterobotics.in/assets/img/360.png" alt="responsive webite" style="margin-left:150px; margin-right:0px;" class="img-fluid float-start">
-        </div>
-        <div class="col-md-6 col-md-6 ">
-
-          <ul style="margin-right:120px; margin-left:0px;">
-            <li> RFQs Management & Control </li>
-            <li> Engineering data management thru 3DExperience Platform </li>
-            <li> Create BOQ/BOM Automatically for Purchase and Manufacturing </li>
-            <li> Electronic communication to each function- Design data release & Controls </li>
-            <li> Online Project Management and Alarm for CTP activity </li>
-            <li> Track and Manage Engineering changes (ECN/ECR/ECO) for shop floor drawings </li>
-            <li> Service & Customer feedback record and online monitoring system </li>
-
-          </ul>
-        </div>
-      </div>
-    </div> -->
-
-
-
-
-      <section id="turnkey" class="turnkey">
-        <div class="turnkey">
-
-          <img src="https://www.eterobotics.in/assets/img/turnkey2.png" class="img-fluid" alt="">
-        </div>
-        </div>
-      </section>
-    </section>
-    <!-- End About Section -->
-
-
-
-
-    <!-- ======= Pricing/strenth Section ======= -->
-    <section id="pricing" class="pricing">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>Our Strength</h2>
-          <!-- <p>We believe that our Employee and Customer satisfaction is a key driver of growth & profitability</p> -->
-        </div>
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="200">
-            <div class="pricing-item">
-
-              <div class="pricing-header">
-                <h3>Top Management & Commitment</h3>
-                <!-- <h4><sup>$</sup>0<span> / month</span></h4> -->
-              </div>
-
-              <ul>
-                <li><i class="bi bi-dot"></i> <span>A highly professional & well educated team </span></li>
-                <li><i class="bi bi-dot"></i> <span>More than 3 decade experience Robotic, Assembly & Automations
-                    field</span></li>
-                <li><i class="bi bi-dot"></i> <span>Experienced with Global Automotive companies- JLR, Eicher , Tata,
-                    Mahindra, Bajaj, Tata Motor, Ford, GM, MG Motors, Marreli, Aerospace etc</span></li>
-                <li><i class="bi bi-dot"></i> <span>Committed to exceed expectation of customers & stake holders in the
-                    direction of Safety, quality, delivery and cost </span></li>
-
-              </ul>
-
-              <!-- <div class="text-center mt-auto">
-                <a href="#" class="buy-btn">Buy Now</a>
-              </div> -->
-
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="400">
-            <div class="pricing-item featured">
-
-              <div class="pricing-header">
-                <h3>Advance Manufacturing Engineering tools</h3>
-                <!-- <h4><sup>$</sup>29<span> / month</span></h4> -->
-              </div>
-
-              <ul>
-                <li><i class="bi bi-dot"></i> <span>Six Sigma and Lean Manufacturing</span></li>
-                <li><i class="bi bi-dot"></i> <span>Mfg System Design, Takt Time Analysis, Line Balancing, Problem
-                    solving techniques</span></li>
-                <li><i class="bi bi-dot"></i> <span>SPC and MSA study, Run at Rate</span>
-                </li>
-                <li><i class="bi bi-dot"></i> <span>PFD, PFMEA, CP, Standardizations</span>
-                </li>
-                <li><i class="bi bi-dot"></i> <span>Quality Management System- TS and ISO</span>
-                </li>
-                <li><i class="bi bi-dot"></i> <span>Extensive experienced team for Project Management- MS Project, PMP
-                    and PDP</span>
-                </li>
-              </ul>
-
-              <!-- <div class="text-center mt-auto">
-                <a href="#" class="buy-btn">Buy Now</a>
-              </div> -->
-
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="600">
-            <div class="pricing-item">
-
-              <div class="pricing-header">
-                <h3>Capability & <br> Capacity </h3>
-                <!-- <h4><sup>$</sup>49<span> / month</span></h4> -->
-              </div>
-
-              <ul>
-                <li><i class="bi bi-dot"></i> <span>Testing technology- <a href="https://www.ttech.to.it/"
-                      style="color: red;">TTECH</a> (Italy)</span></li>
-                <li><i class="bi bi-dot"></i> <span>Dedicated team for Robotics & Assembly Lines process planning,
-                    designing, set up & execution for pre-process & post process</span></li>
-                <li><i class="bi bi-dot"></i> <span>State of Art manufacturing facility including QA Standard lab CMM
-                    -Zeiss & Faro etc</span></li>
-                <li><i class="bi bi-dot"></i> <span>Fully Equipped design facility with trained engineers & software
-                    (Gurgaon and Ahembdabad)</span></li>
-
-              </ul>
-
-              <!-- <div class="text-center mt-auto">
-                <a href="#" class="buy-btn">Buy Now</a>
-              </div> -->
-
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="400">
-            <div class="pricing-item featured">
-
-              <div class="pricing-header">
-                <h3>Value <br>Engineering</h3>
-                <!-- <h4><sup>$</sup>29<span> / month</span></h4> -->
-              </div>
-
-              <ul>
-                <li><i class="bi bi-dot"></i> <span>Product and Process design optimization for lowest capex & opex
-                    cost</span></li>
-                <li><i class="bi bi-dot"></i> <span>3W concept - Work, Wait & Walk</span></li>
-                <li><i class="bi bi-dot"></i> <span>Welding distortion analysis</span>
-                </li>
-                <li><i class="bi bi-dot"></i> <span>Highly capable at welding & automations process Strategy
-                    design</span>
-                </li>
-                <li><i class="bi bi-dot"></i> <span>Able to design & deliver highly reliable welding & automations
-                    processes</span>
-                </li>
-
-              </ul>
-
-              <!-- <div class="text-center mt-auto">
-                          <a href="#" class="buy-btn">Buy Now</a>
-                        </div> -->
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Pricing Section -->
-
-
-
-    <!-- ======= Call To Action Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-out">
-
-        <div class="row g-5">
-
-          <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
-            <h2><em></em> Mr Suryakant</h2>
-            <p> <br>A dynamic professional having more than 2 Decade hand on experience with Automotive & Defence
-              Aerospace industries. He has held a Black Belt in Six Sigma & certified at Lean Manufacturing, PDP & PMP.
-              He has held various leading positions with world reputed organization like Eicher Polaris Pvt Ltd, Tata
-              Group, Defence & Aerospace Facility Punj Lloyd, Avtec and Delphi.
-              <br>
-              <br> He is Mechanical Engineer with Post Graduate in Financial Management from Narsee Monjee Institute of
-              Management Studies Mumbai.
-            </p>
-            <!-- <a class="cta-btn align-self-start" href="#">Call To Action</a> -->
-          </div>
-
-          <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
-            <div class="img">
-              <img src="https://www.eterobotics.in/assets/img/CTA.jpg" alt="" class="img-fluid">
-              <h5 class="h5ceo">
-                ( Founder & CEO )
-              </h5>
-            </div>
-          </div>
-
-        </div>
-
-        <br><br><br>
-
-        <div class="row g-5">
-
-          <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
-            <h2><em></em> NK Choudhary</h2>
-            <p> <br> A seasoned professional having more than 2 Decade hand on experience in Design & Program management
-              with Automotive Industries.
-              <br><br> He has held various leading positions with world reputed organization like Renault Nissan, Toyota
-              Group, Faurecia ( Forvia ), etc. <br><br>He is a Graduate Mechanical Engineer.
-            </p>
-            <!-- <a class="cta-btn align-self-start" href="#">Call To Action</a> -->
-          </div>
-
-          <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
-            <div class="img">
-              <img src="https://www.eterobotics.in/assets/img/team/naveen.jpg" alt="" class="img-fluid">
-              <h5 class="h5ceo">
-                ( Director - Design )
-              </h5>
-            </div>
-          </div>
-
-        </div>
-
-
-
-      </div>
-    </section>
-
-    <!-- End Call To Action Section-->
-
-
-
-
-
-
-
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
-      <div class="container" data-aos="zoom-out">
-        <div class="section-header">
-          <h2>Major clients</h2>
-
-        </div>
-
-
-        <div class="clients-slider swiper">
-
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-1.png"
-                class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-2.png"
-                class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-3.png"
-                class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-4.png"
-                class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-5.png"
-                class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-6.png"
-                class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-7.png"
-                class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-8.png"
-                class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-9.png"
-                class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-10.png"
-                class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-11.png"
-                class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-12.png"
-                class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-13.png"
-                class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-14.png"
-                class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-15.png"
-                class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-16.png"
-                class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-17.png"
-                class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-18.png"
-                class="img-fluid" alt=""></div>
-
-
-
-
-
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Clients Section -->
-
-
-
-    <!-- Gallery image carousel saction started -->
-
-
-    <div class="container cor">
-      <div class="section-header">
-        <h2>Pictures</h2>
-        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel"
-          data-interval="6000" data-pause="false">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="d-block w-100" src="https://www.eterobotics.in/assets/img/portfolio/thumb/machine/1.jpg"
-                alt="First slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="https://www.eterobotics.in/assets/img/portfolio/thumb/machine/2.jpg"
-                alt="Second slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="https://www.eterobotics.in/assets/img/portfolio/thumb/machine/3.jpg"
-                alt="Third slide">
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only"> P </span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only"> N </span>
-          </a>
-        </div>
-      </div>
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-
-      <!-- gallery image carousel section ends -->
-
-
-
-
-
-
-      <!-- ======= Testimonials Section ======= -->
-
-
-
-
-
-
-
-
-      <!-- ======= F.A.Q Section ======= -->
-      <!-- End F.A.Q Section -->
-
-
-
-
-
-
-
-
-      <!-- ======= Team Section ======= -->
-
-
-      <!-- ======= Recent Blog Posts Section ======= -->
-      <!-- <section id="recent-blog-posts" class="recent-blog-posts"> -->
-
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>Blog</h2>
-          <p>Recent posts form our Blog</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="post-box">
-              <div class="post-img"><img src="https://www.eterobotics.in/assets/img/blog/blog-1.jpg" class="img-fluid"
-                  alt=""></div>
-              <div class="meta">
-                <span class="post-date"> Jan 12</span>
-                <span class="post-author"> / Amal</span>
-              </div>
-              <h3 class="post-title">What is Mechanical arm </h3>
-              <p>Robots have been a part of our daily lives for many years. From assembly lines in factories to the
-                exploration of other planets, robots have been an essential tool in a variety of industries. Mechanical
-                arm robots, also known as robotic arms, are one of the most common types of robots. They are used .....
-              </p>
-              <a href="newblog.html" class="readmore stretched-link"><span>Read More</span><i
-                  class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="post-box">
-              <div class="post-img"><img src="https://www.eterobotics.in/assets/img/blog/ai.jpg" class="img-fluid"
-                  alt=""></div>
-              <div class="meta">
-                <span class="post-date">Mar 01</span>
-                <span class="post-author"> / Amal</span>
-              </div>
-              <h3 class="post-title">How AI is affecting production lines</h3>
-              <p>In recent years, artificial intelligence (AI) has become increasingly integrated into the manufacturing
-                industry. AI can be used to automate production lines, improve product quality, and reduce costs. In
-                this blog post, we'll explore how AI is affecting production lines and what this means for the future of
-                manufacturing....</p>
-              <a href="aiblog.html" class="readmore stretched-link"><span>Read More</span><i
-                  class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="post-box">
-              <div class="post-img"><img src="https://www.eterobotics.in/assets/img/blog/ev.jpg" class="img-fluid"
-                  alt=""></div>
-              <div class="meta">
-                <span class="post-date">Mar 05</span>
-                <span class="post-author"> / Mr. Deep</span>
-              </div>
-              <h3 class="post-title">The Rise of EV Manufacturing</h3>
-              <p>As the demand for EVs grows, so too does the need for EV manufacturing. This has led to a flurry of
-                activity in the auto industry as established companies and startups alike look to capitalize on the EV
-                boom...</p>
-              <a href="ev.html" class="readmore stretched-link"><span>Read More</span><i
-                  class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-      </section><!-- End Recent Blog Posts Section -->
-
-
-
-      <!-- ======= Contact Section ======= -->
-      <section id="contact" class="contact">
-        <div class="container">
+      <!-- ======= Pricing/strenth Section ======= -->
+      <section id="pricing" class="pricing">
+        <div class="container" data-aos="fade-up">
 
           <div class="section-header">
-            <h2>Contact Us</h2>
-            <p>ETE Robotic Systems Integrator Private Limited</p>
-            <p>Ex Works: Plot No. 698, Sector 37, Pace Cty-II, Gurgoan, India</p>
+            <h2>Our Strength</h2>
+          </div>
+
+          <div class="row gy-4 mb-5">
+            <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+              <div class="pricing-item">
+                <div class="pricing-header">
+                  <h3>Deep ISO/IATF Integration</h3>
+                </div>
+                <ul>
+                  <li><i class="bi bi-dot"></i> <span>Industry 4.0-ready software solutions</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Comprehensive QMS/ERP integration</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Automated compliance monitoring</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Real-time quality control systems</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Seamless audit management</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pricing-item featured">
+                <div class="pricing-header">
+                  <h3>Mobile-Friendly</h3>
+                </div>
+                <ul>
+                  <li><i class="bi bi-dot"></i> <span>Cross-platform mobile applications</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Real-time data access anywhere</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Intuitive user interface</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Offline functionality support</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Secure mobile authentication</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="600">
+              <div class="pricing-item">
+                <div class="pricing-header">
+                  <h3>In-House Manufacturing</h3>
+                </div>
+                <ul>
+                  <li><i class="bi bi-dot"></i> <span>Custom panel development</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Precision tooling solutions</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Advanced fixturing systems</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Quality-controlled production</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Rapid prototyping capabilities</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pricing-item featured">
+                <div class="pricing-header">
+                  <h3>Proven Automation Expertise</h3>
+                </div>
+                <ul>
+                  <li><i class="bi bi-dot"></i> <span>Industry-leading automation solutions</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Custom automation systems</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Process optimization expertise</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Reliable performance metrics</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Continuous improvement focus</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="row gy-4">
+            <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+              <div class="pricing-item">
+                <div class="pricing-header">
+                  <h3>In-house Fabrication</h3>
+                </div>
+                <ul>
+                  <li><i class="bi bi-dot"></i> <span>State-of-the-art fabrication facility</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Custom metal fabrication</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Precision machining services</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Quality control systems</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Rapid turnaround times</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pricing-item featured">
+                <div class="pricing-header">
+                  <h3>Integrated Solutions</h3>
+                </div>
+                <ul>
+                  <li><i class="bi bi-dot"></i> <span>End-to-end system integration</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Hardware-software synchronization</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Seamless data flow</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Unified control systems</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Comprehensive support</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="600">
+              <div class="pricing-item">
+                <div class="pricing-header">
+                  <h3>Cost-Effective</h3>
+                </div>
+                <ul>
+                  <li><i class="bi bi-dot"></i> <span>Affordable SaaS solutions</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Economical automation packages</span></li>
+                  <li><i class="bi bi-dot"></i> <span>ROI-focused implementations</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Flexible pricing models</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Long-term cost savings</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pricing-item featured">
+                <div class="pricing-header">
+                  <h3>Scalability</h3>
+                </div>
+                <ul>
+                  <li><i class="bi bi-dot"></i> <span>Modular system architecture</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Flexible capacity planning</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Enterprise-wide solutions</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Growth-ready infrastructure</span></li>
+                  <li><i class="bi bi-dot"></i> <span>Adaptable to business needs</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section><!-- End Pricing Section -->
+
+
+
+      <!-- ======= Call To Action Section ======= -->
+      <section id="cta" class="cta">
+        <div class="container" data-aos="zoom-out">
+
+          <div class="row g-5">
+
+            <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
+              <h2><em></em> Mr Suryakant</h2>
+              <p> <br>A dynamic professional having more than 2 Decade hand on experience with Automotive & Defence
+                Aerospace industries. He has held a Black Belt in Six Sigma & certified at Lean Manufacturing, PDP &
+                PMP.
+                He has held various leading positions with world reputed organization like Eicher Polaris Pvt Ltd, Tata
+                Group, Defence & Aerospace Facility Punj Lloyd, Avtec and Delphi.
+                <br>
+                <br> He is Mechanical Engineer with Post Graduate in Financial Management from Narsee Monjee Institute
+                of
+                Management Studies Mumbai.
+              </p>
+              <!-- <a class="cta-btn align-self-start" href="#">Call To Action</a> -->
+            </div>
+
+            <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
+              <div class="img">
+                <img src="https://www.eterobotics.in/assets/img/CTA.jpg" alt="" class="img-fluid">
+                <h5 class="h5ceo">
+                  ( Founder & CEO )
+                </h5>
+              </div>
+            </div>
+
+          </div>
+
+          <br><br><br>
+
+          <div class="row g-5">
+
+            <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
+              <h2><em></em> NK Choudhary</h2>
+              <p> <br> A seasoned professional having more than 2 Decade hand on experience in Design & Program
+                management
+                with Automotive Industries.
+                <br><br> He has held various leading positions with world reputed organization like Renault Nissan,
+                Toyota
+                Group, Faurecia ( Forvia ), etc. <br><br>He is a Graduate Mechanical Engineer.
+              </p>
+              <!-- <a class="cta-btn align-self-start" href="#">Call To Action</a> -->
+            </div>
+
+            <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
+              <div class="img">
+                <img src="https://www.eterobotics.in/assets/img/team/naveen.jpg" alt="" class="img-fluid">
+                <h5 class="h5ceo">
+                  ( Director - Design )
+                </h5>
+              </div>
+            </div>
+
+          </div>
+
+
+
+        </div>
+      </section>
+
+      <!-- End Call To Action Section-->
+
+
+
+
+
+
+
+      <!-- ======= Clients Section ======= -->
+      <section id="clients" class="clients">
+        <div class="container" data-aos="zoom-out">
+          <div class="section-header">
+            <h2>Major clients</h2>
+
+          </div>
+
+
+          <div class="clients-slider swiper">
+
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-1.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-2.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-3.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-4.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-5.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-6.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-7.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-8.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-9.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-10.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-11.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-12.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-13.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-14.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-15.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-16.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-17.png"
+                  class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="https://www.eterobotics.in/assets/img/clients/client-18.png"
+                  class="img-fluid" alt=""></div>
+
+
+
+
+
+            </div>
+          </div>
+
+        </div>
+      </section><!-- End Clients Section -->
+
+
+
+      <!-- Gallery image carousel saction started -->
+
+
+      <div class="container cor">
+        <div class="section-header">
+          <h2>Pictures</h2>
+          <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel"
+            data-interval="6000" data-pause="false">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="https://www.eterobotics.in/assets/img/portfolio/thumb/machine/1.jpg"
+                  alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="https://www.eterobotics.in/assets/img/portfolio/thumb/machine/2.jpg"
+                  alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="https://www.eterobotics.in/assets/img/portfolio/thumb/machine/3.jpg"
+                  alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only"> P </span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only"> N </span>
+            </a>
+          </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+        <!-- gallery image carousel section ends -->
+
+
+
+
+
+
+        <!-- ======= Testimonials Section ======= -->
+
+
+
+
+
+
+
+
+        <!-- ======= F.A.Q Section ======= -->
+        <!-- End F.A.Q Section -->
+
+
+
+
+
+
+
+
+        <!-- ======= Team Section ======= -->
+
+
+        <!-- ======= Recent Blog Posts Section ======= -->
+        <!-- <section id="recent-blog-posts" class="recent-blog-posts"> -->
+
+        <div class="container" data-aos="fade-up">
+
+          <div class="section-header">
+            <h2>Blog</h2>
+            <p>Recent posts form our Blog</p>
+          </div>
+
+          <div class="row">
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="post-box">
+                <div class="post-img"><img src="https://www.eterobotics.in/assets/img/blog/blog-1.jpg" class="img-fluid"
+                    alt=""></div>
+                <div class="meta">
+                  <span class="post-date"> Jan 12</span>
+                  <span class="post-author"> / Amal</span>
+                </div>
+                <h3 class="post-title">What is Mechanical arm </h3>
+                <p>Robots have been a part of our daily lives for many years. From assembly lines in factories to the
+                  exploration of other planets, robots have been an essential tool in a variety of industries.
+                  Mechanical
+                  arm robots, also known as robotic arms, are one of the most common types of robots. They are used
+                  .....
+                </p>
+                <a href="newblog.html" class="readmore stretched-link"><span>Read More</span><i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+              <div class="post-box">
+                <div class="post-img"><img src="https://www.eterobotics.in/assets/img/blog/ai.jpg" class="img-fluid"
+                    alt=""></div>
+                <div class="meta">
+                  <span class="post-date">Mar 01</span>
+                  <span class="post-author"> / Amal</span>
+                </div>
+                <h3 class="post-title">How AI is affecting production lines</h3>
+                <p>In recent years, artificial intelligence (AI) has become increasingly integrated into the
+                  manufacturing
+                  industry. AI can be used to automate production lines, improve product quality, and reduce costs. In
+                  this blog post, we'll explore how AI is affecting production lines and what this means for the future
+                  of
+                  manufacturing....</p>
+                <a href="aiblog.html" class="readmore stretched-link"><span>Read More</span><i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="600">
+              <div class="post-box">
+                <div class="post-img"><img src="https://www.eterobotics.in/assets/img/blog/ev.jpg" class="img-fluid"
+                    alt=""></div>
+                <div class="meta">
+                  <span class="post-date">Mar 05</span>
+                  <span class="post-author"> / Mr. Deep</span>
+                </div>
+                <h3 class="post-title">The Rise of EV Manufacturing</h3>
+                <p>As the demand for EVs grows, so too does the need for EV manufacturing. This has led to a flurry of
+                  activity in the auto industry as established companies and startups alike look to capitalize on the EV
+                  boom...</p>
+                <a href="ev.html" class="readmore stretched-link"><span>Read More</span><i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+
           </div>
 
         </div>
 
-        <div class="map">
-          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe> -->
+    </section><!-- End Recent Blog Posts Section -->
 
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.558399649397!2d76.99053181526978!3d28.43257893471014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1733e6a00d99%3A0xad36b2c92cb9a917!2sETE%20ROBOTICS%20SYSTEMS%20INTEGRATOR%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1676345758901!5m2!1sen!2sin"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
 
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Contact Us</h2>
+          <p>ETE Robotic Systems Integrator Private Limited</p>
+          <p>Ex Works: Plot No. 698, Sector 37, Pace Cty-II, Gurgoan, India</p>
         </div>
-        <!-- End Google Maps -->
 
-        <div class="container">
+      </div>
 
-          <div class="row gy-5 gx-lg-5">
+      <div class="map">
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe> -->
 
-            <div class="col-lg-4">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.558399649397!2d76.99053181526978!3d28.43257893471014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1733e6a00d99%3A0xad36b2c92cb9a917!2sETE%20ROBOTICS%20SYSTEMS%20INTEGRATOR%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1676345758901!5m2!1sen!2sin"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-              <div class="info">
-                <h3>ETE Robotic</h3>
-                <!-- <p>Et id eius voluptates atque nihil voluptatem enim in tempore minima sit ad mollitia commodi minus.</p> -->
+      </div>
+      <!-- End Google Maps -->
 
-                <div class="info-item d-flex">
-                  <i class="bi bi-geo-alt flex-shrink-0"></i>
-                  <div>
-                    <h4>Location:</h4>
-                    <p>Ex Works: Plot No. 698, Sector 37, Pace Cty-II, Gurgoan, India</p>
-                    <br>
+      <div class="container">
 
-                    <p> <strong>Zonal Offices:</strong></p>
-                    <a href="https://goo.gl/maps/e6DVFEgY2ofxXk6YA">
-                      <p> Ahmedabad, Belgaum</p>
-                    </a>
-                  </div>
-                </div><!-- End Info Item -->
+        <div class="row gy-5 gx-lg-5">
 
-                <div class="info-item d-flex">
-                  <i class="bi bi-envelope flex-shrink-0"></i>
-                  <div>
-                    <h4>Email:</h4>
-                    <p> <a href="mailto:info@eterobotics.in">info@eterobotics.in</a> </p>
-                    <p> <a href="mailto:sales@eterobotics.in">sales@eterobotics.in</a> </p>
-                  </div>
-                </div><!-- End Info Item -->
+          <div class="col-lg-4">
 
-                <div class="info-item d-flex">
-                  <i class="bi bi-phone flex-shrink-0"></i>
-                  <div>
-                    <h4>Call:</h4>
-                    <p> <a href="tel:+919990056299">+919990056299</a> </p>
-                  </div>
-                </div><!-- End Info Item -->
+            <div class="info">
+              <h3>ETE Robotic</h3>
+              <!-- <p>Et id eius voluptates atque nihil voluptatem enim in tempore minima sit ad mollitia commodi minus.</p> -->
 
-              </div>
+              <div class="info-item d-flex">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h4>Location:</h4>
+                  <p>Ex Works: Plot No. 698, Sector 37,<br> Pace Cty-II, Gurgoan, India<br><br>
+                    <strong>Zonal Offices:</strong>
+                  </p>
+                  <a href="https://goo.gl/maps/e6DVFEgY2ofxXk6YA">
+                    <p> Ahmedabad, Belgaum</p>
+                  </a>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h4>Email:</h4>
+                  <p> <a href="mailto:info@eterobotics.in">info@eterobotics.in</a> </p>
+                  <p> <a href="mailto:sales@eterobotics.in">sales@eterobotics.in</a> </p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-phone flex-shrink-0"></i>
+                <div>
+                  <h4>Call:</h4>
+                  <p> <a href="tel:+919990056299">+919990056299</a> </p>
+                </div>
+              </div><!-- End Info Item -->
 
             </div>
 
-            <div class="col-lg-8 cform">
-
-              <!-- paste form.txt here -->
-
-
-
-              <form action="https://formspree.io/f/mvgazzna" method="POST">
-                <div class="form-group">
-                  <label for="name">Name:</label>
-                  <input type="text" class="form-control" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                  <label for="company">Company Name:</label>
-                  <input type="text" class="form-control" id="company" name="company" required>
-                </div>
-
-                <div class="form-group">
-                  <label for="email">Email:</label>
-                  <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                  <label for="phone">Contact Number:</label>
-                  <input type="tel" class="form-control" id="phone" name="phone" required>
-                </div>
-
-                <div class="form-group">
-                  <label for="message">Message:</label>
-                  <textarea class="form-control" id="message" name="message" required></textarea>
-                </div>
-
-                <br><br>
-                <div class="text-center">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-              </form>
-
-
-
-            </div><!-- End Contact Form -->
-
           </div>
 
+          <div class="col-lg-8 cform">
+
+            <!-- paste form.txt here -->
+
+
+
+            <form action="https://formspree.io/f/mvgazzna" method="POST">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="company">Company Name:</label>
+                <input type="text" class="form-control" id="company" name="company" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Contact Number:</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea class="form-control" id="message" name="message" required></textarea>
+              </div>
+
+              <br><br>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+
+
+
+          </div><!-- End Contact Form -->
+
         </div>
-      </section><!-- End Contact Section -->
+
+      </div>
+    </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
+  <div>
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
 
-    <div class="footer-content">
-      <div class="container">
-        <div class="row">
+      <div class="footer-content">
+        <div class="container">
+          <div class="row">
 
-          <div class="col-lg-3 col-md-6">
-            <div class="footer-info">
-              <p style="font-size:25px; color: #F18F38;">ETE Robotics</p>
-              <!-- <p>
-                Ex Works: Plot No. 698, Sector 37,<br> Pace Cty-II, Gurgoan, India<br><br>
-                <strong>Phone:</strong> +919990056299<br>
-                <strong>Email:</strong> info@eterobotics.in
-                <br>
-              </p> -->
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><a class="nav-link scrollto" href="index.html#services">Turnkey Solutions</a></li>
-              <li><a class="nav-link scrollto" href="index.html#services">Testing Solutions</a></li>
-              <li><a class="nav-link scrollto" href="index.html#services">Latest Technology Transfers</a></li>
-
-
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Location:</h4>
-            <p>
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-info">
+                <p style="font-size:25px; color: #F18F38;">ETE Robotics</p>
+                <!-- <p>
               Ex Works: Plot No. 698, Sector 37,<br> Pace Cty-II, Gurgoan, India<br><br>
               <strong>Phone:</strong> +919990056299<br>
               <strong>Email:</strong> info@eterobotics.in
               <br>
-            </p>
-            <!-- <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form> -->
+            </p> -->
+              </div>
+            </div>
 
+            <div class="col-lg-2 col-md-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Services</h4>
+              <ul>
+                <li><a class="nav-link scrollto" href="index.html#services">Turnkey Solutions</a></li>
+                <li><a class="nav-link scrollto" href="index.html#services">Testing Solutions</a></li>
+                <li><a class="nav-link scrollto" href="index.html#services">Latest Technology Transfers</a></li>
+
+
+              </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6 footer-newsletter">
+              <h4>Location:</h4>
+              <p>
+                Ex Works: Plot No. 698, Sector 37,<br> Pace Cty-II, Gurgoan, India<br><br>
+                <strong>Phone:</strong> +919990056299<br>
+                <strong>Email:</strong> info@eterobotics.in
+                <br>
+              </p>
+              <!-- <form action="" method="post">
+            <input type="email" name="email"><input type="submit" value="Subscribe">
+          </form> -->
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-legal text-center">
+        <div
+          class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+          <div class="d-flex flex-column align-items-center align-items-lg-start">
+            <div class="copyright">
+              &copy; Copyright <strong><span>ETE Robotics</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+              <!-- All the links in the footer should remain intact. -->
+              <!-- You can delete the links only if you purchased the pro version. -->
+              <!-- Licensing information: https://bootstrapmade.com/license/ -->
+              <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
+              <!-- Designed by<p> -->
+              <a href="https://bootstrapmade.com/"></a>
+            </div>
+          </div>
+
+          <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+            <a href="https://wa.me/+919990056299" class="bi bi-whatsapp" </a>
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.facebook.com/eterobotics/" class="facebook"><i class="bi bi-facebook"></i></a>
+              <!-- <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
+              <!-- <a href="#" class="google-plus"><i class="bi bi-skype"></i></a> -->
+              <a href="https://in.linkedin.com/in/ete-robotics-916617120" class="linkedin"><i
+                  class="bi bi-linkedin"></i></a>
           </div>
 
         </div>
       </div>
-    </div>
 
-    <div class="footer-legal text-center">
-      <div
-        class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+    </footer><!-- End Footer -->
+  </div>
 
-        <div class="d-flex flex-column align-items-center align-items-lg-start">
-          <div class="copyright">
-            &copy; Copyright <strong><span>ETE Robotics</span></strong>. All Rights Reserved
-          </div>
-          <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
-            <!-- Designed by<p> -->
-            <a href="https://bootstrapmade.com/"></a>
-          </div>
-        </div>
-
-        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href="https://wa.me/+919990056299" class="bi bi-whatsapp" </a>
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="https://www.facebook.com/eterobotics/" class="facebook"><i class="bi bi-facebook"></i></a>
-            <!-- <a href="#" class="instagram"><i class="bi bi-instagram"></i></a> -->
-            <!-- <a href="#" class="google-plus"><i class="bi bi-skype"></i></a> -->
-            <a href="https://in.linkedin.com/in/ete-robotics-916617120" class="linkedin"><i
-                class="bi bi-linkedin"></i></a>
-        </div>
-
-      </div>
-    </div>
-
-  </footer><!-- End Footer -->
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
@@ -1309,7 +1775,7 @@
 
 
   <!-- Partnership Announcement Modal -->
-  <div class="modal fade" id="partnershipModal" tabindex="-1" aria-labelledby="partnershipLabel" aria-hidden="true">
+  <!-- <div class="modal fade" id="partnershipModal" tabindex="-1" aria-labelledby="partnershipLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body text-center p-5">
@@ -1324,7 +1790,7 @@
             entrusted with driving <strong>sales, service, and project execution</strong>.
           </p>
 
-          <!-- ✅ Insert Image Here -->
+          
           <div class="my-4">
             <img src="https://www.eterobotics.in/assets/img/hands.png" alt="Partnership Image" class="img-fluid rounded"
               style="max-height: 180px;">
@@ -1346,10 +1812,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
-
+<!-- 
   <script>
     window.addEventListener('load', () => {
       const partnershipModal = new bootstrap.Modal(document.getElementById('partnershipModal'));
@@ -1357,6 +1823,23 @@
     });
   </script>
 
+  <style>
+    .service-item .img {
+      height: 200px;
+      /* Adjust this height as needed */
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .service-item .img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* Ensures the image covers the area, cropping if necessary */
+    }
+  </style> -->
 
 </body>
 
