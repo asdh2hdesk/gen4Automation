@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery | Automation Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary: #7b61ff;
+      --bg: #0a0a13;
+      --text: #eaeaea;
+      --card-bg: #181828;
+      --border-radius: 18px;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 16px;
+    }
+    h1, h2 {
+      color: var(--primary);
+      margin-bottom: 16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    h2 {
+      margin-top: 48px;
+      font-size: 2rem;
+    }
+    .gallery-section {
+      margin-bottom: 40px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .gallery-card {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s;
+      text-decoration: none;
+    }
+    .gallery-card:hover {
+      transform: translateY(-6px) scale(1.03);
+    }
+    .gallery-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-card .caption {
+      padding: 12px 10px;
+      font-size: 1rem;
+      color: var(--primary);
+      text-align: center;
+      font-weight: 500;
+    }
+    .gallery-card:link, .gallery-card:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 12px 4px;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
+      .gallery-card img {
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Gallery</h1>
+
+    <!-- Assembly Lines -->
+    <div class="gallery-section">
+      <h2>Assembly Lines</h2>
+      <div class="gallery-grid">
+        <a href="#" class="gallery-card">
+          <img src="images/assembly1.jpg" alt="Assembly Line 1">
+          <div class="caption">Automated Assembly Line Overview</div>
+        </a>
+        <a href="#" class="gallery-card">
+          <img src="images/assembly2.jpg" alt="Assembly Line 2">
+          <div class="caption">Conveyor System with Parts</div>
+        </a>
+        <a href="#" class="gallery-card">
+          <img src="images/assembly3.jpg" alt="Assembly Line 3">
+          <div class="caption">Robotic Arm in Assembly</div>
+        </a>
+        <a href="#" class="gallery-card">
+          <img src="images/assembly4.jpg" alt="Assembly Line 4">
+          <div class="caption">Precision Assembly Station</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Example Projects -->
+    <div class="gallery-section">
+      <h2>Example Projects</h2>
+      <div class="gallery-grid">
+        <a href="#" class="gallery-card">
+          <img src="images/vacuum_packing1.jpg" alt="Vacuum Packing Machine">
+          <div class="caption">Vacuum Packing Machine</div>
+        </a>
+        <a href="#" class="gallery-card">
+          <img src="images/rotor_tilting.jpg" alt="Rotor Tilting Machine">
+          <div class="caption">Rotor Tilting Machine</div>
+        </a>
+        <a href="#" class="gallery-card">
+          <img src="images/oil_dipping.jpg" alt="Oil Dipping Machine">
+          <div class="caption">Oil Dipping Machine</div>
+        </a>
+        <a href="#" class="gallery-card">
+          <img src="images/scratch_testing.jpg" alt="Scratch Testing Machine">
+          <div class="caption">Scratch Testing Machine</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Precision Tooling & Fixtures -->
+    <div class="gallery-section">
+      <h2>Precision Tooling's & Fixtures</h2>
+      <div class="gallery-grid">
+        <a href="#" class="gallery-card">
+          <img src="images/tooling1.jpg" alt="Tooling Fixture 1">
+          <div class="caption">Precision Tooling Fixture</div>
+        </a>
+        <a href="#" class="gallery-card">
+          <img src="images/tooling2.jpg" alt="Tooling Fixture 2">
+          <div class="caption">Gear Machining Fixture</div>
+        </a>
+        <a href="#" class="gallery-card">
+          <img src="images/tooling3.jpg" alt="Tooling Fixture 3">
+          <div class="caption">Automated Robotic Handling</div>
+        </a>
+        <a href="#" class="gallery-card">
+          <img src="images/tooling4.jpg" alt="Tooling Fixture 4">
+          <div class="caption">Custom Machining Fixture</div>
+        </a>
+        <a href="#" class="gallery-card">
+          <img src="images/tooling5.jpg" alt="Tooling Fixture 5">
+          <div class="caption">Precision Gear Setup</div>
+        </a>
+        <a href="#" class="gallery-card">
+          <img src="images/tooling6.jpg" alt="Tooling Fixture 6">
+          <div class="caption">Multi-Part Fixture</div>
+        </a>
+        <a href="#" class="gallery-card">
+          <img src="images/tooling7.jpg" alt="Tooling Fixture 7">
+          <div class="caption">CNC Machined Fixture</div>
+        </a>
+        <a href="#" class="gallery-card">
+          <img src="images/tooling8.jpg" alt="Tooling Fixture 8">
+          <div class="caption">Assembly Jig</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Inhouse Panel Development -->
+    <div class="gallery-section">
+      <h2>Inhouse Panel Development</h2>
+      <div class="gallery-grid">
+        <a href="#" class="gallery-card">
+          <img src="images/panel1.jpg" alt="Panel Development 1">
+          <div class="caption">Control Panel Assembly</div>
+        </a>
+        <a href="#" class="gallery-card">
+          <img src="images/panel2.jpg" alt="Panel Development 2">
+          <div class="caption">Wiring & Integration</div>
+        </a>
+        <a href="#" class="gallery-card">
+          <img src="images/panel3.jpg" alt="Panel Development 3">
+          <div class="caption">Panel Internal View</div>
+        </a>
+        <a href="#" class="gallery-card">
+          <img src="images/panel4.jpg" alt="Panel Development 4">
+          <div class="caption">Completed Panel</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
