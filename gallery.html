@@ -4,11 +4,26 @@
   <meta charset="UTF-8">
   <title>Gallery | Automation Solutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicons -->
+  <link href="assets/favicon_io/android-chrome-192x192.png" rel="icon">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@0,300;0,400;0,700&family=Poppins:wght@0,300;0,400;0,700&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/variables.css" rel="stylesheet">
+  <link href="assets/css/variables-orange.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
   <style>
     :root {
       --primary: #7b61ff;
-      --bg: #0a0a13;
-      --text: #eaeaea;
+      --bg: #ffffff;
+      --text: #181828;
       --card-bg: #181828;
       --border-radius: 18px;
     }
@@ -22,7 +37,7 @@
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 32px 16px;
+      padding: 120px 16px 32px 16px;
     }
     h1, h2 {
       color: var(--primary);
@@ -39,8 +54,8 @@
     }
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
     }
     .gallery-card {
       background: var(--card-bg);
@@ -52,151 +67,298 @@
       align-items: center;
       transition: transform 0.2s;
       text-decoration: none;
+      cursor: pointer;
     }
     .gallery-card:hover {
       transform: translateY(-6px) scale(1.03);
     }
     .gallery-card img {
       width: 100%;
-      height: 180px;
+      height: 260px;
       object-fit: cover;
       display: block;
+      border-radius: 0 0 12px 12px;
+      background: #fff;
     }
     .gallery-card .caption {
-      padding: 12px 10px;
-      font-size: 1rem;
+      padding: 16px 10px 10px 10px;
+      font-size: 1.1rem;
       color: var(--primary);
       text-align: center;
       font-weight: 500;
+      background: var(--card-bg);
+      width: 100%;
     }
-    .gallery-card:link, .gallery-card:visited {
-      color: inherit;
-      text-decoration: none;
+    @media (max-width: 900px) {
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+      .gallery-card img {
+        height: 180px;
+      }
     }
     @media (max-width: 600px) {
       .container {
-        padding: 12px 4px;
+        padding: 120px 4px 32px 4px;
       }
-      h2 {
-        font-size: 1.3rem;
+      .gallery-grid {
+        grid-template-columns: 1fr;
       }
       .gallery-card img {
-        height: 120px;
+        height: 180px;
       }
     }
+    /* Modal image style */
+    .modal-img {
+      width: 100%;
+      max-width: 800px;
+      max-height: 80vh;
+      object-fit: contain;
+      margin: 0 auto;
+      display: block;
+      border-radius: 12px;
+      background: #fff;
+    }
+    .modal-content {
+      background: #181828;
+      border-radius: 18px;
+      color: #fff;
+      text-align: center;
+    }
+    .modal-header {
+      border-bottom: none;
+    }
+    .modal-title {
+      color: var(--primary);
+      font-size: 1.2rem;
+      font-weight: 600;
+      width: 100%;
+      text-align: center;
+    }
+    .btn-close {
+      filter: invert(1);
+    }
+    h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 32px;
+  color: #7b61ff; /* or your preferred primary color */
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+}
   </style>
 </head>
 <body>
+  <!-- ======= Header/Navbar (same as index.html) ======= -->
+  <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between bg-white">
+      <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <div id="rotating-logos" style="height: 100px; position: relative;">
+          <img src="assets/img/logo/asd.png" alt="" class="logo-img" style="position: absolute; opacity: 0; transition: opacity 0.3s;">
+          <img src="assets/img/logo/gen4auto.jpeg" alt="" class="logo-img" style="position: absolute; opacity: 0; transition: opacity 0.3s;">
+          <img src="assets/img/logo/som.jpeg" alt="" class="logo-img" style="position: absolute; opacity: 0; transition: opacity 0.3s;">
+        </div>
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const logos = document.querySelectorAll('.logo-img');
+            let currentIndex = 0;
+            function showNextLogo() {
+              logos.forEach(logo => logo.style.opacity = '0');
+              logos[currentIndex].style.opacity = '1';
+              currentIndex = (currentIndex + 1) % logos.length;
+            }
+            showNextLogo();
+            setInterval(showNextLogo, 3000);
+          });
+        </script>
+      </a>
+      <nav id="navbar" class="navbar ">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html#about" style="font-size:18px; color: #070178;">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services" style="font-size:18px; color: #070178;">Product & Services</a></li>
+          <li><a class="nav-link scrollto" href="index.html#facility" style="font-size:18px; color: #070178;">Facility</a></li>
+          <li><a class="nav-link scrollto" href="index.html#cta" style="font-size:18px; color: #070178;">Top Management</a></li>
+          <li><a class="nav-link scrollto active" href="gallery.html" style="font-size:18px; color: #070178;">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact" style="font-size:18px; color: #070178;">Contact</a></li>
+          <li class="dropdown"><a href="#"><span style="font-size:18px; color: #070178;">Call Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul style="min-width: 200px; right: 0; left: auto;">
+              <li><a href="tel:+918888293019" style="padding: 10px 20px; white-space: nowrap;"><i class="bi bi-telephone"></i> +91 8888293019</a></li>
+              <li><a href="tel:+919743452269" style="padding: 10px 20px; white-space: nowrap;"><i class="bi bi-telephone"></i> +91 9743452269</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+      </nav>
+    </div>
+  </header>
+  <!-- ======= End Header/Navbar ======= -->
+
   <div class="container">
     <h1>Gallery</h1>
-
     <!-- Assembly Lines -->
     <div class="gallery-section">
       <h2>Assembly Lines</h2>
       <div class="gallery-grid">
-        <a href="#" class="gallery-card">
-          <img src="images/assembly1.jpg" alt="Assembly Line 1">
+        <div class="gallery-card" data-img="assets/img/machine/Picture3.png" data-caption="ABB Inspection Packaging System">
+          <img src="assets/img/machine/Picture3.png" alt="Assembly Line 1">
+          <div class="caption">ABB Inspection Packaging System</div>
+        </div>
+        <div class="gallery-card" data-img="assets/img/machine/Picture1.png" data-caption="Automated Assembly Line Overview">
+          <img src="assets/img/machine/Picture1.png" alt="Assembly Line 2">
           <div class="caption">Automated Assembly Line Overview</div>
-        </a>
-        <a href="#" class="gallery-card">
-          <img src="images/assembly2.jpg" alt="Assembly Line 2">
+        </div>
+        <div class="gallery-card" data-img="assets/img/machine/Picture4.png" data-caption="Conveyor System with Parts">
+          <img src="assets/img/machine/Picture4.png" alt="Assembly Line 3">
           <div class="caption">Conveyor System with Parts</div>
-        </a>
-        <a href="#" class="gallery-card">
-          <img src="images/assembly3.jpg" alt="Assembly Line 3">
-          <div class="caption">Robotic Arm in Assembly</div>
-        </a>
-        <a href="#" class="gallery-card">
-          <img src="images/assembly4.jpg" alt="Assembly Line 4">
+        </div>
+        <div class="gallery-card" data-img="assets/img/machine/Picture5.png" data-caption="Precision Assembly Station">
+          <img src="assets/img/machine/Picture5.png" alt="Assembly Line 4">
           <div class="caption">Precision Assembly Station</div>
-        </a>
+        </div>
       </div>
     </div>
-
     <!-- Example Projects -->
     <div class="gallery-section">
       <h2>Example Projects</h2>
       <div class="gallery-grid">
-        <a href="#" class="gallery-card">
-          <img src="images/vacuum_packing1.jpg" alt="Vacuum Packing Machine">
+        <div class="gallery-card" data-img="assets/img/machine/Picture6.png" data-caption="Vacuum Packing Machine">
+          <img src="assets/img/machine/Picture6.png" alt="Vacuum Packing Machine">
           <div class="caption">Vacuum Packing Machine</div>
-        </a>
-        <a href="#" class="gallery-card">
-          <img src="images/rotor_tilting.jpg" alt="Rotor Tilting Machine">
+        </div>
+        <div class="gallery-card" data-img="assets/img/machine/Picture7.png" data-caption="Rotor Tilting Machine">
+          <img src="assets/img/machine/Picture7.png" alt="Rotor Tilting Machine">
           <div class="caption">Rotor Tilting Machine</div>
-        </a>
-        <a href="#" class="gallery-card">
-          <img src="images/oil_dipping.jpg" alt="Oil Dipping Machine">
+        </div>
+        <div class="gallery-card" data-img="assets/img/machine/Picture9.png" data-caption="Oil Dipping Machine">
+          <img src="assets/img/machine/Picture9.png" alt="Oil Dipping Machine">
           <div class="caption">Oil Dipping Machine</div>
-        </a>
-        <a href="#" class="gallery-card">
-          <img src="images/scratch_testing.jpg" alt="Scratch Testing Machine">
+        </div>
+        <div class="gallery-card" data-img="assets/img/machine/Picture10.png" data-caption="Scratch Testing Machine">
+          <img src="assets/img/machine/Picture10.png" alt="Scratch Testing Machine">
           <div class="caption">Scratch Testing Machine</div>
-        </a>
+        </div>
       </div>
     </div>
-
     <!-- Precision Tooling & Fixtures -->
     <div class="gallery-section">
       <h2>Precision Tooling's & Fixtures</h2>
       <div class="gallery-grid">
-        <a href="#" class="gallery-card">
-          <img src="images/tooling1.jpg" alt="Tooling Fixture 1">
+        <div class="gallery-card" data-img="assets/img/machine/Picture11.png" data-caption="Precision Tooling Fixture">
+          <img src="assets/img/machine/Picture11.png" alt="Tooling Fixture 1">
           <div class="caption">Precision Tooling Fixture</div>
-        </a>
-        <a href="#" class="gallery-card">
-          <img src="images/tooling2.jpg" alt="Tooling Fixture 2">
+        </div>
+        <div class="gallery-card" data-img="assets/img/machine/Picture12.png" data-caption="Gear Machining Fixture">
+          <img src="assets/img/machine/Picture12.png" alt="Tooling Fixture 2">
           <div class="caption">Gear Machining Fixture</div>
-        </a>
-        <a href="#" class="gallery-card">
-          <img src="images/tooling3.jpg" alt="Tooling Fixture 3">
+        </div>
+        <div class="gallery-card" data-img="assets/img/machine/Picture14.png" data-caption="Automated Robotic Handling">
+          <img src="assets/img/machine/Picture14.png" alt="Tooling Fixture 3">
           <div class="caption">Automated Robotic Handling</div>
-        </a>
-        <a href="#" class="gallery-card">
-          <img src="images/tooling4.jpg" alt="Tooling Fixture 4">
+        </div>
+        <div class="gallery-card" data-img="assets/img/machine/Picture13.png" data-caption="Custom Machining Fixture">
+          <img src="assets/img/machine/Picture13.png" alt="Tooling Fixture 4">
           <div class="caption">Custom Machining Fixture</div>
-        </a>
-        <a href="#" class="gallery-card">
-          <img src="images/tooling5.jpg" alt="Tooling Fixture 5">
+        </div>
+        <div class="gallery-card" data-img="assets/img/machine/Picture15.png" data-caption="Precision Gear Setup">
+          <img src="assets/img/machine/Picture15.png" alt="Tooling Fixture 5">
           <div class="caption">Precision Gear Setup</div>
-        </a>
-        <a href="#" class="gallery-card">
-          <img src="images/tooling6.jpg" alt="Tooling Fixture 6">
+        </div>
+        <div class="gallery-card" data-img="assets/img/machine/Picture16.png" data-caption="Multi-Part Fixture">
+          <img src="assets/img/machine/Picture16.png" alt="Tooling Fixture 6">
           <div class="caption">Multi-Part Fixture</div>
-        </a>
-        <a href="#" class="gallery-card">
-          <img src="images/tooling7.jpg" alt="Tooling Fixture 7">
+        </div>
+        <div class="gallery-card" data-img="assets/img/machine/Picture17.png" data-caption="CNC Machined Fixture">
+          <img src="assets/img/machine/Picture17.png" alt="Tooling Fixture 7">
           <div class="caption">CNC Machined Fixture</div>
-        </a>
-        <a href="#" class="gallery-card">
-          <img src="images/tooling8.jpg" alt="Tooling Fixture 8">
+        </div>
+        <div class="gallery-card" data-img="assets/img/machine/Picture18.png" data-caption="Assembly Jig">
+          <img src="assets/img/machine/Picture18.png" alt="Tooling Fixture 8">
           <div class="caption">Assembly Jig</div>
-        </a>
+        </div>
       </div>
     </div>
-
     <!-- Inhouse Panel Development -->
     <div class="gallery-section">
       <h2>Inhouse Panel Development</h2>
       <div class="gallery-grid">
-        <a href="#" class="gallery-card">
-          <img src="images/panel1.jpg" alt="Panel Development 1">
+        <div class="gallery-card" data-img="assets/img/machine/Picture19.png" data-caption="Control Panel Assembly">
+          <img src="assets/img/machine/Picture19.png" alt="Panel Development 1">
           <div class="caption">Control Panel Assembly</div>
-        </a>
-        <a href="#" class="gallery-card">
-          <img src="images/panel2.jpg" alt="Panel Development 2">
+        </div>
+        <div class="gallery-card" data-img="assets/img/machine/Picture20.png" data-caption="Wiring & Integration">
+          <img src="assets/img/machine/Picture20.png" alt="Panel Development 2">
           <div class="caption">Wiring & Integration</div>
-        </a>
-        <a href="#" class="gallery-card">
-          <img src="images/panel3.jpg" alt="Panel Development 3">
+        </div>
+        <div class="gallery-card" data-img="assets/img/machine/Picture21.png" data-caption="Panel Internal View">
+          <img src="assets/img/machine/Picture21.png" alt="Panel Development 3">
           <div class="caption">Panel Internal View</div>
-        </a>
-        <a href="#" class="gallery-card">
-          <img src="images/panel4.jpg" alt="Panel Development 4">
+        </div>
+        <div class="gallery-card" data-img="assets/img/machine/Picture22.png" data-caption="Completed Panel">
+          <img src="assets/img/machine/Picture22.png" alt="Panel Development 4">
           <div class="caption">Completed Panel</div>
-        </a>
+        </div>
+      </div>
+    </div>
+    <!-- Software Dashboard's -->
+    <div class="gallery-section">
+      <h2>Software Dashboard's</h2>
+      <div class="gallery-grid">
+        <div class="gallery-card" data-img="assets/img/machine/Picture23.png" data-caption="New Part Development">
+          <img src="assets/img/machine/Picture23.png" alt="Assembly Line 1">
+          <div class="caption">New Part Development</div>
+        </div>
+        <div class="gallery-card" data-img="assets/img/machine/Picture24.png" data-caption="Audit Overview">
+          <img src="assets/img/machine/Picture24.png" alt="Assembly Line 2">
+          <div class="caption">Audit Overview</div>
+        </div>
+        <div class="gallery-card" data-img="assets/img/machine/Picture25.png" data-caption="Non Conformance">
+          <img src="assets/img/machine/Picture25.png" alt="Assembly Line 3">
+          <div class="caption">Non Conformance</div>
+        </div>
+        <div class="gallery-card" data-img="assets/img/machine/Picture26.png" data-caption="Management Dashboard">
+          <img src="assets/img/machine/Picture26.png" alt="Assembly Line 4">
+          <div class="caption">Management Dashboard</div>
+        </div>
       </div>
     </div>
   </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title w-100" id="imageModalLabel"></div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="" alt="" class="modal-img" id="modalImage">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Gallery popup logic
+    document.querySelectorAll('.gallery-card').forEach(card => {
+      card.addEventListener('click', function () {
+        const imgSrc = this.getAttribute('data-img');
+        const caption = this.getAttribute('data-caption');
+        document.getElementById('modalImage').src = imgSrc;
+        document.getElementById('imageModalLabel').textContent = caption;
+        const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+        modal.show();
+      });
+    });
+  </script>
 </body>
 </html>

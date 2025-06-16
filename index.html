@@ -183,17 +183,20 @@
             <li><a class="nav-link scrollto" href="index.html#contact"
                 style="font-size:18px; color: #070178;">Contact</a>
             </li>
-            <li class="dropdown"><a href="#"><span style="font-size:18px; color: #070178;">Call Us</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <li class="dropdown"><a href="#"><span style="font-size:18px; color: #070178;">Call Us</span> <i
+                  class="bi bi-chevron-down dropdown-indicator"></i></a>
               <ul style="min-width: 200px; right: 0; left: auto;">
-                <li><a href="tel:+918888293019" style="padding: 10px 20px; white-space: nowrap;"><i class="bi bi-telephone"></i> +91 8888293019</a></li>
-                <li><a href="tel:+919743452269" style="padding: 10px 20px; white-space: nowrap;"><i class="bi bi-telephone"></i> +91 9743452269</a></li>
+                <li><a href="tel:+918888293019" style="padding: 10px 20px; white-space: nowrap;"><i
+                      class="bi bi-telephone"></i> +91 8888293019</a></li>
+                <li><a href="tel:+919743452269" style="padding: 10px 20px; white-space: nowrap;"><i
+                      class="bi bi-telephone"></i> +91 9743452269</a></li>
               </ul>
             </li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle d-none"></i>
         </nav><!-- .navbar -->
 
-      
+
 
       </div>
     </header><!-- End Header -->
@@ -229,7 +232,7 @@
             <img src="assets/img/banner/som.png" class="d-block w-100" alt="Demo 2"
               style="height: 100vh; object-fit: cover;">
           </div>
-          
+
         </div>
 
         <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
@@ -244,7 +247,7 @@
     </div>
   </section>
 
-  <style>
+  <!-- <style>
     #hero-animated {
       padding: 0;
       margin: 0;
@@ -263,20 +266,79 @@
       object-fit: cover !important;
     }
 
-    @media (max-width: 768px) {
+    /* Large screens (1440px and above) */
+    @media (min-width: 1440px) {
       #hero-animated {
         height: 100vh;
       }
-
       .carousel-item {
         height: 100vh;
       }
-
       .carousel-item img {
         object-fit: cover;
+        max-height: 100vh;
       }
     }
-  </style>
+
+    /* Medium-large screens (1020px to 1439px) */
+    @media (min-width: 1020px) and (max-width: 1439px) {
+      #hero-animated {
+        height: 90vh;
+      }
+      .carousel-item {
+        height: 90vh;
+      }
+      .carousel-item img {
+        object-fit: cover;
+        max-height: 90vh;
+      }
+    }
+
+    /* Tablets and small laptops (768px to 1019px) */
+    @media (min-width: 769px) and (max-width: 1019px) {
+      #hero-animated {
+        height: 80vh;
+      }
+      .carousel-item {
+        height: 80vh;
+      }
+      .carousel-item img {
+        object-fit: cover;
+        max-height: 80vh;
+        padding-top:50px;
+      }
+    }
+
+    /* Mobile devices (425px to 767px) */
+    @media (min-width: 426px) and (max-width: 768px) {
+      #hero-animated {
+        height: 50vh;
+      }
+      .carousel-item {
+        height: 50vh;
+      }
+      .carousel-item img {
+        object-fit: cover;
+        max-height: 50vh;
+      }
+    }
+
+    /* Small mobile devices (below 425px) */
+    @media (max-width: 425px) {
+      #hero-animated {
+        height: 40vh;
+        min-height: 30vh;
+      }
+      .carousel-item {
+        height: 40vh;
+      }
+      .carousel-item img {
+        object-fit: cover !important;
+        max-height: 40vh;
+        padding-top: 80px;
+      }
+    }
+  </style> -->
 
   <div id="rotating-text-container" style="position: relative; height: 100px; text-align: center; margin-top: 20px;">
     <h1 class="value rotating-text"
@@ -285,10 +347,10 @@
     <h1 class="value rotating-text"
       style="color:#070178; position: absolute; width: 100%; top: 50%; transform: translateY(-50%); opacity: 0; transition: opacity 1s;">
       "Achieving the Highest Automation with Economical Solutions"</h1>
-      <h1 class="value rotating-text"
+    <h1 class="value rotating-text"
       style="color:#070178; position: absolute; width: 100%; top: 50%; transform: translateY(-50%); opacity: 0; transition: opacity 1s;">
       Driving Innovation in Automation and Software Solutions
-</h1>
+    </h1>
   </div>
 
   <script>
@@ -327,77 +389,76 @@
           <span class="badge bg-primary mb-3">Transformative Solutions</span>
           <h2 class="mb-4">Revolutionize Your Manufacturing Operations with Unified Excellence</h2>
           <p class="lead">
-            Experience unparalleled efficiency and compliance in your manufacturing with our innovative QMS and ERP solutions, ensuring ISO 9001 and IATF 16949 adherence while driving you forward in Industry 4.0.
+            Experience unparalleled efficiency and compliance in your manufacturing with our innovative QMS and ERP
+            solutions, ensuring ISO 9001 and IATF 16949 adherence while driving you forward in Industry 4.0.
           </p>
         </div>
-      
+
         <!-- Cards Section -->
         <div class="row g-4 mt-4">
           <!-- Card 1 -->
-          <div class="col-12 col-md-4">
+          <div class="col-lg-4 col-md-6">
             <div class="card h-100 shadow-sm">
               <div class="card-body p-4">
-                <img src="assets/img/logo/asd.png" 
-                     alt="Industrial Automation Illustration" 
-                     class="img-fluid mb-4" 
-                     style="height: 200px; object-fit: contain;">
+                <img src="assets/img/logo/asd.png" alt="Industrial Automation Illustration" class="img-fluid mb-4"
+                  style="height: 200px; object-fit: contain;">
                 <span class="badge bg-dark mb-3">ASD Support System</span>
                 <h4 class="card-title mb-3">Streamlined Compliance Solutions</h4>
                 <p class="card-text">
-                  A cutting-edge,  Quality Management
-            System (QMS) and Enterprise Resource Planning (ERP) solution designed to ensure industrial compliance and
-            operational excellence. Our focus is on seamless integration with ISO 9001, IATF 16949 standards, and
-            Industry 4.0 principles, empowering businesses to achieve peak performance and regulatory adherence.
-                    </p>
+                  A cutting-edge, Quality Management
+                  System (QMS) and Enterprise Resource Planning (ERP) solution designed to ensure industrial compliance
+                  and
+                  operational excellence. Our focus is on seamless integration with ISO 9001, IATF 16949 standards, and
+                  Industry 4.0 principles, empowering businesses to achieve peak performance and regulatory adherence.
+                </p>
               </div>
             </div>
           </div>
-      
+
           <!-- Card 2 -->
-          <div class="col-12 col-md-4">
+          <div class="col-lg-4 col-md-6">
             <div class="card h-100 shadow-sm">
               <div class="card-body p-4">
-                <img src="assets/img/logo/gen4auto.jpeg" 
-                     alt="Automation Engineer" 
-                     class="img-fluid mb-4" 
-                     style="height: 200px; object-fit: contain;">
+                <img src="assets/img/logo/gen4auto.jpeg" alt="Automation Engineer" class="img-fluid mb-4"
+                  style="height: 200px; object-fit: contain;">
                 <span class="badge bg-dark mb-3">Gen4 Automation</span>
                 <h4 class="card-title mb-3">Optimized Automation Solutions</h4>
                 <p class="card-text">
                   Delivering high-performance and cost-effective
-            automation solutions tailored to modern industrial demands. We specialize in designing and implementing
-            advanced machinery, precision tooling, and sophisticated SCADA systems, driving efficiency and innovation
-            across various sectors.
-                    </p>
+                  automation solutions tailored to modern industrial demands. We specialize in designing and
+                  implementing
+                  advanced machinery, precision tooling, and sophisticated SCADA systems, driving efficiency and
+                  innovation
+                  across various sectors.
+                </p>
               </div>
             </div>
           </div>
-      
+
           <!-- Card 3 -->
-          <div class="col-12 col-md-4">
+          <div class="col-lg-4 col-md-6">
             <div class="card h-100 shadow-sm">
               <div class="card-body p-4">
-                <img src="assets/img/logo/som.jpeg" 
-                     alt="Precision Manufacturing Illustration" 
-                     class="img-fluid mb-4" 
-                     style="height: 200px; object-fit: contain;">
+                <img src="assets/img/logo/som.jpeg" alt="Precision Manufacturing Illustration" class="img-fluid mb-4"
+                  style="height: 200px; object-fit: contain;">
                 <span class="badge bg-dark mb-3">Som Precision</span>
                 <h4 class="card-title mb-3">Integrated Precision Technology</h4>
                 <p class="card-text">
                   Committed to empowering businesses with cutting-edge
-            technology that enhances productivity, optimizes resource utilization, and fosters sustainable growth. Our
-            solutions are crafted with a focus on affordability and simplicity, ensuring that advanced precision
-            technology is accessible and easy to integrate for all our clients.    </p>
+                  technology that enhances productivity, optimizes resource utilization, and fosters sustainable growth.
+                  Our
+                  solutions are crafted with a focus on affordability and simplicity, ensuring that advanced precision
+                  technology is accessible and easy to integrate for all our clients. </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
-      
+
+
     </section>
 
-    <style>
+    <!-- <style>
     /* About Section Styles */
     .about {
       padding: 60px 0;
@@ -474,84 +535,85 @@
         padding: 1.5rem;
       }
     }
-    </style>
-
-      
+    </style> -->
 
 
-      <!-- ======= Transform Section ======= -->
-      <section class="transform-section">
-        <div class="container">
-          <div class="section-header text-center mb-5">
-            <h1 class="display-4 fw-bold mb-4">Transform Your Business with Integrated Industrial Excellence</h1>
-            <p class="lead">Experience the future of industrial operations with ASD Support System Private Limited.</p>
+
+
+    <!-- ======= Transform Section ======= -->
+    <section class="transform-section">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <h1 class="display-4 fw-bold mb-4">Transform Your Business with Integrated Industrial Excellence</h1>
+          <p class="lead">Experience the future of industrial operations with ASD Support System Private Limited.</p>
+        </div>
+
+        <div class="transform-cards">
+          <div class="transform-card" data-tilt>
+            <div class="card-content">
+              <div class="card-front">
+                <div class="icon-wrapper">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+                <h3>ISO/IATF Compliance</h3>
+              </div>
+              <div class="card-back">
+                <h3>ISO/IATF Compliance</h3>
+                <p>Ensuring quality and reliability in all operations with advanced compliance monitoring and automated
+                  quality control systems.</p>
+                <div class="card-features">
+                  <span>Quality Management</span>
+                  <span>Compliance Monitoring</span>
+                  <span>Automated Controls</span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="transform-cards">
-            <div class="transform-card" data-tilt>
-              <div class="card-content">
-                <div class="card-front">
-                  <div class="icon-wrapper">
-                    <i class="bi bi-shield-check"></i>
-                  </div>
-                  <h3>ISO/IATF Compliance</h3>
+          <div class="transform-card" data-tilt>
+            <div class="card-content">
+              <div class="card-front">
+                <div class="icon-wrapper">
+                  <i class="bi bi-graph-up-arrow"></i>
                 </div>
-                <div class="card-back">
-                  <h3>ISO/IATF Compliance</h3>
-                  <p>Ensuring quality and reliability in all operations with advanced compliance monitoring and automated quality control systems.</p>
-                  <div class="card-features">
-                    <span>Quality Management</span>
-                    <span>Compliance Monitoring</span>
-                    <span>Automated Controls</span>
-                  </div>
+                <h3>Real-Time Traceability</h3>
+              </div>
+              <div class="card-back">
+                <h3>Real-Time Traceability</h3>
+                <p>Monitor your operations effortlessly with advanced SCADA systems and real-time data analytics.</p>
+                <div class="card-features">
+                  <span>Live Monitoring</span>
+                  <span>Data Analytics</span>
+                  <span>Performance Tracking</span>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="transform-card" data-tilt>
-              <div class="card-content">
-                <div class="card-front">
-                  <div class="icon-wrapper">
-                    <i class="bi bi-graph-up-arrow"></i>
-                  </div>
-                  <h3>Real-Time Traceability</h3>
+          <div class="transform-card" data-tilt>
+            <div class="card-content">
+              <div class="card-front">
+                <div class="icon-wrapper">
+                  <i class="bi bi-boxes"></i>
                 </div>
-                <div class="card-back">
-                  <h3>Real-Time Traceability</h3>
-                  <p>Monitor your operations effortlessly with advanced SCADA systems and real-time data analytics.</p>
-                  <div class="card-features">
-                    <span>Live Monitoring</span>
-                    <span>Data Analytics</span>
-                    <span>Performance Tracking</span>
-                  </div>
-                </div>
+                <h3>Scalable Solutions</h3>
               </div>
-            </div>
-
-            <div class="transform-card" data-tilt>
-              <div class="card-content">
-                <div class="card-front">
-                  <div class="icon-wrapper">
-                    <i class="bi bi-boxes"></i>
-                  </div>
-                  <h3>Scalable Solutions</h3>
-                </div>
-                <div class="card-back">
-                  <h3>Scalable Solutions</h3>
-                  <p>Unlock the potential of intelligent and adaptable platforms tailored to your specific needs.</p>
-                  <div class="card-features">
-                    <span>Custom Solutions</span>
-                    <span>Flexible Scaling</span>
-                    <span>Future-Ready</span>
-                  </div>
+              <div class="card-back">
+                <h3>Scalable Solutions</h3>
+                <p>Unlock the potential of intelligent and adaptable platforms tailored to your specific needs.</p>
+                <div class="card-features">
+                  <span>Custom Solutions</span>
+                  <span>Flexible Scaling</span>
+                  <span>Future-Ready</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <style>
+    <!-- <style>
       .transform-section {
         background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         padding: 100px 0;
@@ -685,11 +747,11 @@
           height: 350px;
         }
       }
-      </style>
+      </style> -->
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-      <script>
-      document.addEventListener('DOMContentLoaded', function() {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
         VanillaTilt.init(document.querySelectorAll(".transform-card"), {
           max: 15,
           speed: 400,
@@ -697,44 +759,44 @@
           "max-glare": 0.2,
         });
       });
-      </script>
+    </script>
 
-      <!-- ======= Featured Services Section ======= -->
-      <section id="featured-services" class="featured-services">
-        <div class="container">
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services">
+      <div class="container">
 
-          <div class="row gy-4">
+        <div class="row gy-4">
 
-            <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-out">
-              <div class="service-item position-relative">
-                <div class="icon"><i class="bi bi-eye"></i></div>
-                <h4><a href="" class="stretched-link">Vision</a></h4>
-                <p>To be a leading global innovator in providing compliant, efficient, and cost-effective automation and
-                  precision solutions, setting new benchmarks for industrial excellence.</p>
-              </div>
-            </div><!-- End Service Item-->
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-out">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-eye"></i></div>
+              <h4><a href="" class="stretched-link">Vision</a></h4>
+              <p>To be a leading global innovator in providing compliant, efficient, and cost-effective automation and
+                precision solutions, setting new benchmarks for industrial excellence.</p>
+            </div>
+          </div><!-- End Service Item-->
 
-            <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="200">
-              <div class="service-item position-relative">
-                <div class="icon"><i class="bi bi-rocket"></i></div>
-                <h4><a href="" class="stretched-link">Mission</a></h4>
-                <p>To empower industries with advanced  QMS/ERP systems, high-performance automation, and
-                  accessible precision technologies, consistently driving productivity, optimizing resources, and
-                  ensuring compliance.</p>
-              </div>
-            </div><!-- End Service Item-->
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-rocket"></i></div>
+              <h4><a href="" class="stretched-link">Mission</a></h4>
+              <p>To empower industries with advanced QMS/ERP systems, high-performance automation, and
+                accessible precision technologies, consistently driving productivity, optimizing resources, and
+                ensuring compliance.</p>
+            </div>
+          </div><!-- End Service Item-->
 
-            <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
-              <div class="service-item position-relative">
-                <div class="icon"><i class="bi bi-bullseye"></i></div>
-                <h4><a href="" class="stretched-link">Objective</a></h4>
-                <p>To deliver cutting-edge, affordable, and user-friendly solutions that enable businesses to enhance
-                  operational efficiency, achieve regulatory adherence, and foster sustainable growth across diverse
-                  industrial landscapes.</p>
-              </div>
-            </div><!-- End Service Item-->
+          <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-bullseye"></i></div>
+              <h4><a href="" class="stretched-link">Objective</a></h4>
+              <p>To deliver cutting-edge, affordable, and user-friendly solutions that enable businesses to enhance
+                operational efficiency, achieve regulatory adherence, and foster sustainable growth across diverse
+                industrial landscapes.</p>
+            </div>
+          </div><!-- End Service Item-->
 
-            <!-- <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="600">
+          <!-- <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="600">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-broadcast icon"></i></div>
               <h4><a href="" class="stretched-link">Nemo Enim</a></h4>
@@ -743,117 +805,119 @@
           </div>
           <!-- End Service Item-->
 
-          </div>
-
         </div>
-      </section><!-- End Featured Services Section-->
+
+      </div>
+    </section><!-- End Featured Services Section-->
 
 
 
-      <!-- ======= Services Section ======= -->
-      <section id="services" class="services">
-        <div class="container" data-aos="fade-up">
-          <div class="section-header text-center mb-5">
-            <div class="section-title-wrapper">
-              <span class=" badge bg-primary section-subtitle">What We Offer</span>
-              <h2 class="section-title">Our Products & Services</h2>
-              <p>Innovative solutions designed to transform your business operations, our products and services empower organizations to streamline workflows, enhance customer experiences, boost productivity, and drive sustainable growth through cutting-edge technology and tailored strategies.</p>
-              <div class="title-separator"></div>
-            </div>
-          </div>
-
-          <div class="row g-4">
-            <!-- ASD Software Card -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <div class="service-icon">
-                      <i class="bi bi-activity"></i>
-                    </div>
-                    <div class="service-image">
-                      <img src="assets/img/images/Picture3.png" alt="ASD Software">
-                    </div>
-                    <h3>ASD Software:  Solutions
-</h3>
-                  </div>
-                  <div class="flip-card-back">
-                    <h4>ASD Software Solutions</h4>
-                    <ul class="feature-list">
-                      <li><i class="bi bi-check2-circle"></i> QMS + ERP Modules</li>
-                      <li><i class="bi bi-check2-circle"></i> CAPA & Audit Systems</li>
-                      <li><i class="bi bi-check2-circle"></i> HR & Inventory Management</li>
-                      <li><i class="bi bi-check2-circle"></i> SCADA Integration</li>
-                      <li><i class="bi bi-check2-circle"></i> ISO Standardization</li>
-                      <li><i class="bi bi-check2-circle"></i> Mobile Applications</li>
-                    </ul>
-                    <a href="#contact" class="flip-btn">Learn More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Gen4Automation Card -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <div class="service-icon">
-                      <i class="bi bi-broadcast"></i>
-                    </div>
-                    <div class="service-image">
-                      <img src="assets/img/images/Picture4.png" alt="Gen4Automation">
-                    </div>
-                    <h3>Gen4Automation: Innovative Automation Systems
-</h3>
-                  </div>
-                  <div class="flip-card-back">
-                    <h4>Automation Excellence</h4>
-                    <ul class="feature-list">
-                      <li><i class="bi bi-check2-circle"></i> Special Purpose Machines</li>
-                      <li><i class="bi bi-check2-circle"></i> Servo-Based Systems</li>
-                      <li><i class="bi bi-check2-circle"></i> Advanced Packaging Solutions</li>
-                      <li><i class="bi bi-check2-circle"></i> Precision Laser Marking</li>
-                      <li><i class="bi bi-check2-circle"></i> Robust Machine Design</li>
-                    </ul>
-                    <a href="#contact" class="flip-btn ">Learn More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Som Services Card -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <div class="service-icon">
-                      <i class="bi bi-easel"></i>
-                    </div>
-                    <div class="service-image">
-                      <img src="assets/img/images/Picture5.png" alt="Som Services">
-                    </div>
-                    <h3>Som Precisions: Engineering & Lifecycle Services
-</h3>
-                  </div>
-                  <div class="flip-card-back">
-                    <h4>Comprehensive Services</h4>
-                    <ul class="feature-list">
-                      <li><i class="bi bi-check2-circle"></i> Plant AMC Services</li>
-                      <li><i class="bi bi-check2-circle"></i> System Retrofitting</li>
-                      <li><i class="bi bi-check2-circle"></i> Re-engineering Solutions</li>
-                      <li><i class="bi bi-check2-circle"></i> Professional Design Services</li>
-                    </ul>
-                    <a href="#contact" class="flip-btn">Learn More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header text-center mb-5">
+          <div class="section-title-wrapper">
+            <span class=" badge bg-primary section-subtitle">What We Offer</span>
+            <h2 class="section-title">Our Products & Services</h2>
+            <p>Innovative solutions designed to transform your business operations, our products and services empower
+              organizations to streamline workflows, enhance customer experiences, boost productivity, and drive
+              sustainable growth through cutting-edge technology and tailored strategies.</p>
+            <div class="title-separator"></div>
           </div>
         </div>
-      </section>
 
-      <style>
+        <div class="row g-4">
+          <!-- ASD Software Card -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="service-icon">
+                    <i class="bi bi-activity"></i>
+                  </div>
+                  <div class="service-image">
+                    <img src="assets/img/images/Picture3.png" alt="ASD Software">
+                  </div>
+                  <h3>ASD Software: Solutions
+                  </h3>
+                </div>
+                <div class="flip-card-back">
+                  <h4>ASD Software Solutions</h4>
+                  <ul class="feature-list">
+                    <li><i class="bi bi-check2-circle"></i> QMS + ERP Modules</li>
+                    <li><i class="bi bi-check2-circle"></i> CAPA & Audit Systems</li>
+                    <li><i class="bi bi-check2-circle"></i> HR & Inventory Management</li>
+                    <li><i class="bi bi-check2-circle"></i> SCADA Integration</li>
+                    <li><i class="bi bi-check2-circle"></i> ISO Standardization</li>
+                    <li><i class="bi bi-check2-circle"></i> Mobile Applications</li>
+                  </ul>
+                  <a href="#contact" class="flip-btn">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gen4Automation Card -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="service-icon">
+                    <i class="bi bi-broadcast"></i>
+                  </div>
+                  <div class="service-image">
+                    <img src="assets/img/images/Picture4.png" alt="Gen4Automation">
+                  </div>
+                  <h3>Gen4Automation: Innovative Automation Systems
+                  </h3>
+                </div>
+                <div class="flip-card-back">
+                  <h4>Automation Excellence</h4>
+                  <ul class="feature-list">
+                    <li><i class="bi bi-check2-circle"></i> Special Purpose Machines</li>
+                    <li><i class="bi bi-check2-circle"></i> Servo-Based Systems</li>
+                    <li><i class="bi bi-check2-circle"></i> Advanced Packaging Solutions</li>
+                    <li><i class="bi bi-check2-circle"></i> Precision Laser Marking</li>
+                    <li><i class="bi bi-check2-circle"></i> Robust Machine Design</li>
+                  </ul>
+                  <a href="#contact" class="flip-btn ">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Som Services Card -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="service-icon">
+                    <i class="bi bi-easel"></i>
+                  </div>
+                  <div class="service-image">
+                    <img src="assets/img/images/Picture5.png" alt="Som Services">
+                  </div>
+                  <h3>Som Precisions: Engineering & Lifecycle Services
+                  </h3>
+                </div>
+                <div class="flip-card-back">
+                  <h4>Comprehensive Services</h4>
+                  <ul class="feature-list">
+                    <li><i class="bi bi-check2-circle"></i> Plant AMC Services</li>
+                    <li><i class="bi bi-check2-circle"></i> System Retrofitting</li>
+                    <li><i class="bi bi-check2-circle"></i> Re-engineering Solutions</li>
+                    <li><i class="bi bi-check2-circle"></i> Professional Design Services</li>
+                  </ul>
+                  <a href="#contact" class="flip-btn">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <style>
       .services {
         padding: 100px 0;
         background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -904,7 +968,7 @@
       .flip-card {
         background-color: transparent;
         width: 100%;
-        height: 400px;
+        height: 400px !important;
         perspective: 1000px;
         margin-bottom: 30px;
       }
@@ -1052,315 +1116,331 @@
           font-size: 2rem;
         }
       }
-      </style>
+      </style> -->
 
-      <!-- ================END OF OUR SERVICES================ -->
+    <!-- ================END OF OUR SERVICES================ -->
 
-      <!-- ==================START OF NEW OUR SERVICES=============== -->
+    <!-- ==================START OF NEW OUR SERVICES=============== -->
 
 
-      <!-- ======= Services Section ======= -->
-      <section id="facility" class="services">
-        <div class="container" data-aos="fade-up">
+    <!-- ======= Services Section ======= -->
+    <section id="facility" class="services">
+      <div class="container" data-aos="fade-up">
 
-          <div class="section-header text-center">
-            <span class="badge bg-primary mb-3">State-of-the-Art Infrastructure</span>
-            <h2 class="mb-4">Our Facility</h2>
-            <p>
-              Facility Size: Approx. 40,000 sq.ft. Team Size: 30+ Employees. Machines: Lathe, VMC, MTTR, Surface Grinder, Drilling machine, etc. Fabrication & Assembly: Cutting Machine, Welding Machine, Assembly Equipments, Trolleys. Softwares: Python, JavaScript, React.Js, Postgres SQL, Flutter, Kotlin, Solidworks, Autocad, ANSYS, CATIA.
-            </p>
-          
-            <div class="title-separator"></div>
-          </div>
+        <div class="section-header text-center">
+          <span class="badge bg-primary mb-3">State-of-the-Art Infrastructure</span>
+          <h2 class="mb-4">Our Facility</h2>
+          <p>
+            Facility Size: Approx. 40,000 sq.ft. Team Size: 30+ Employees. Machines: Lathe, VMC, MTTR, Surface Grinder,
+            Drilling machine, etc. Fabrication & Assembly: Cutting Machine, Welding Machine, Assembly Equipments,
+            Trolleys. Softwares: Python, JavaScript, React.Js, Postgres SQL, Flutter, Kotlin, Solidworks, Autocad,
+            ANSYS, CATIA.
+          </p>
 
-          <div class="row gy-5 mt-3">
+          <div class="title-separator"></div>
+        </div>
 
-            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-              <div class="service-item">
-                <div class="det details position-relative">
-                  <h3 class="t-center">Facility - 1 ASD Software: Software Office
-                  </h3>
-                  <div class="rotating-facility-images" style="position: relative; height: 300px; overflow: hidden;">
-                    <img src="assets/img/images/Picture1.png" class="img-fluid facility-img" alt=""
-                      style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
-                  
-                      <img src="assets/img/images/Picture2.png" class="img-fluid facility-img" alt=""
-                      style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
-                  
-                    <img src="assets/img/images/Picture6.png" class="img-fluid facility-img" alt=""
-                      style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
-                    <img src="assets/img/images/Picture7.png" class="img-fluid facility-img" alt=""
-                      style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
-                  </div>
-                 
+        <div class="row gy-5 mt-3">
+
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-item">
+              <div class="det details position-relative">
+                <h3 class="t-center">Facility - 1 ASD Software: Software Office
+                </h3>
+                <div class="rotating-facility-images" style="position: relative; height: 300px; overflow: hidden;">
+                  <img src="assets/img/images/Picture1.png" class="img-fluid facility-img" alt=""
+                    style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
+
+                  <img src="assets/img/images/Picture2.png" class="img-fluid facility-img" alt=""
+                    style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
+
+                  <img src="assets/img/images/Picture6.png" class="img-fluid facility-img" alt=""
+                    style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
+                  <img src="assets/img/images/Picture7.png" class="img-fluid facility-img" alt=""
+                    style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
                 </div>
-              </div>
-            </div><!-- End Service Item -->
 
-            <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-              <div class="service-item">
-                <div class="det details position-relative">
-                  <h3 class="t-center">Facility - 2 Gen4 Automation: Manufacturing</h3>
-                  <div class="rotating-facility-images" style="position: relative; height: 300px; overflow: hidden;">
-                    <img src="assets/img/images/Picture8.png" class="img-fluid facility-img" alt=""
-                      style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
-                      <img src="assets/img/images/Picture10.png" class="img-fluid facility-img" alt=""
-                      style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
-                      <img src="assets/img/images/Picture13.png" class="img-fluid facility-img" alt=""
-                      style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
-                    <img src="assets/img/images/Pin1.png" class="img-fluid facility-img" alt=""
-                      style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
-                
-                      <img src="assets/img/images/Picture9.png" class="img-fluid facility-img" alt=""
-                      style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
-                  </div>
-                  
-                </div>
               </div>
-            </div><!-- End Service Item -->
-             <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-              <div class="service-item">
-                <div class="det details position-relative">
-                  <h3 class="t-center">Facility - 3 Som precision: Assembly</h3>
-                  <div class="rotating-facility-images" style="position: relative; height: 300px; overflow: hidden;">
-                    <img src="assets/img/images/Picture11.png" class="img-fluid facility-img" alt=""
-                      style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
-                    
-                       </div>
-                 
-                </div>
-              </div>
-            </div><!-- End Service Item -->
+            </div>
+          </div><!-- End Service Item -->
 
-          </div>
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="service-item">
+              <div class="det details position-relative">
+                <h3 class="t-center">Facility - 2 Gen4 Automation: Manufacturing</h3>
+                <div class="rotating-facility-images" style="position: relative; height: 300px; overflow: hidden;">
+                  <img src="assets/img/images/Picture8.png" class="img-fluid facility-img" alt=""
+                    style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
+                  <img src="assets/img/images/Picture10.png" class="img-fluid facility-img" alt=""
+                    style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
+                  <img src="assets/img/images/Picture13.png" class="img-fluid facility-img" alt=""
+                    style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
+                  <img src="assets/img/images/Pin1.png" class="img-fluid facility-img" alt=""
+                    style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
+
+                  <img src="assets/img/images/Picture9.png" class="img-fluid facility-img" alt=""
+                    style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
+                </div>
+
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="service-item">
+              <div class="det details position-relative">
+                <h3 class="t-center">Facility - 3 Som precision: Assembly</h3>
+                <div class="rotating-facility-images" style="position: relative; height: 300px; overflow: hidden;">
+                  <img src="assets/img/images/Picture11.png" class="img-fluid facility-img" alt=""
+                    style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s;">
+
+                </div>
+
+              </div>
+            </div>
+          </div><!-- End Service Item -->
 
         </div>
-      </section><!-- End Services Section -->
 
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          document.querySelectorAll('.rotating-facility-images').forEach(container => {
-            const images = container.querySelectorAll('.facility-img');
-            let currentIndex = 0;
+      </div>
+    </section><!-- End Services Section -->
 
-            function showNextImage() {
-              images.forEach(img => img.style.opacity = '0');
-              images[currentIndex].style.opacity = '1';
-              currentIndex = (currentIndex + 1) % images.length;
-            }
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.rotating-facility-images').forEach(container => {
+          const images = container.querySelectorAll('.facility-img');
+          let currentIndex = 0;
 
-            showNextImage();
-            setInterval(showNextImage, 3000);
-          });
+          function showNextImage() {
+            images.forEach(img => img.style.opacity = '0');
+            images[currentIndex].style.opacity = '1';
+            currentIndex = (currentIndex + 1) % images.length;
+          }
+
+          showNextImage();
+          setInterval(showNextImage, 3000);
         });
-      </script>
+      });
+    </script>
 
-      <!-- ========================END OF NEW SERRVICE==================== -->
+    <!-- ========================END OF NEW SERRVICE==================== -->
 
 
-      <!-- ======= Pricing/strenth Section ======= -->
-      <section id="pricing" class="pricing">
-        <div class="container" data-aos="fade-up">
+    <!-- ======= Pricing/strenth Section ======= -->
+    <section id="pricing" class="pricing">
+      <div class="container" data-aos="fade-up">
 
-          <div class="section-header text-center">
-            <span class="badge bg-primary mb-3">Key Advantages</span>
-            <h2 class="mb-4">Our Strength</h2>
-            <p class="lead">
-              Discover the core strengths that set us apart in the industry. Our commitment to quality, innovation, and integrated solutions empowers us to deliver exceptional value, drive operational excellence, and support sustainable growth for our clients.
-            </p>
-            <div class="title-separator"></div>
-          </div>
-
-          <div class="row gy-4 mt-5 mb-5">
-            <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pricing-item">
-                <div class="pricing-header">
-                  <h3>Deep ISO/IATF Integration</h3>
-                </div>
-                <ul>
-                  <li><i class="bi bi-dot"></i> <span>Industry 4.0-ready software solutions</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Comprehensive QMS/ERP integration</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Automated compliance monitoring</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Real-time quality control systems</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Seamless audit management</span></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pricing-item featured">
-                <div class="pricing-header">
-                  <h3>Mobile-Friendly</h3>
-                </div>
-                <ul>
-                  <li><i class="bi bi-dot"></i> <span>Cross-platform mobile applications</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Real-time data access anywhere</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Intuitive user interface</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Offline functionality support</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Secure mobile authentication</span></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="600">
-              <div class="pricing-item">
-                <div class="pricing-header">
-                  <h3>In-House Manufacturing</h3>
-                </div>
-                <ul>
-                  <li><i class="bi bi-dot"></i> <span>Custom panel development</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Precision tooling solutions</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Advanced fixturing systems</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Quality-controlled production</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Rapid prototyping capabilities</span></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pricing-item featured">
-                <div class="pricing-header">
-                  <h3>Proven Automation</h3>
-                </div>
-                <ul>
-                  <li><i class="bi bi-dot"></i> <span>Industry-leading automation solutions</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Custom automation systems</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Process optimization expertise</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Reliable performance metrics</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Continuous improvement focus</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="row gy-4">
-            <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pricing-item">
-                <div class="pricing-header">
-                  <h3>In-house Fabrication</h3>
-                </div>
-                <ul>
-                  <li><i class="bi bi-dot"></i> <span>State-of-the-art fabrication facility</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Custom metal fabrication</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Precision machining services</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Quality control systems</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Rapid turnaround times</span></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pricing-item featured">
-                <div class="pricing-header">
-                  <h3>Integrated Solutions</h3>
-                </div>
-                <ul>
-                  <li><i class="bi bi-dot"></i> <span>End-to-end system integration</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Hardware-software synchronization</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Seamless data flow</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Unified control systems</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Comprehensive support</span></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="600">
-              <div class="pricing-item">
-                <div class="pricing-header">
-                  <h3>Cost-Effective</h3>
-                </div>
-                <ul>
-                  <li><i class="bi bi-dot"></i> <span>Affordable SaaS solutions</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Economical automation packages</span></li>
-                  <li><i class="bi bi-dot"></i> <span>ROI-focused implementations</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Flexible pricing models</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Long-term cost savings</span></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pricing-item featured">
-                <div class="pricing-header">
-                  <h3>Scalability</h3>
-                </div>
-                <ul>
-                  <li><i class="bi bi-dot"></i> <span>Modular system architecture</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Flexible capacity planning</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Enterprise-wide solutions</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Growth-ready infrastructure</span></li>
-                  <li><i class="bi bi-dot"></i> <span>Adaptable to business needs</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
+        <div class="section-header text-center">
+          <span class="badge bg-primary mb-3">Key Advantages</span>
+          <h2 class="mb-4">Our Strength</h2>
+          <p class="lead">
+            Discover the core strengths that set us apart in the industry. Our commitment to quality, innovation, and
+            integrated solutions empowers us to deliver exceptional value, drive operational excellence, and support
+            sustainable growth for our clients.
+          </p>
+          <div class="title-separator"></div>
         </div>
-      </section><!-- End Pricing Section -->
 
-
-
-      <!-- ======= Call To Action Section ======= -->
-      <section id="cta" class="cta">
-        <div class="container" data-aos="zoom-out">
-          <div class="section-header text-center">
-            <span class="badge bg-primary mb-3">Leadership Excellence</span>
-            <h2 class="mb-4">Meet Our Visionary Leaders</h2>
-            <p class="lead">
-              Our leadership team brings together decades of combined experience in automation, manufacturing, and technology innovation, driving our mission to deliver cutting-edge solutions and sustainable growth.
-            </p>
-            <div class="title-separator"></div>
+        <div class="row gy-4 mt-5 mb-5">
+          <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+            <div class="pricing-item">
+              <div class="pricing-header">
+                <h3>Deep ISO/IATF Integration</h3>
+              </div>
+              <ul>
+                <li><i class="bi bi-dot"></i> <span>Industry 4.0-ready software solutions</span></li>
+                <li><i class="bi bi-dot"></i> <span>Comprehensive QMS/ERP integration</span></li>
+                <li><i class="bi bi-dot"></i> <span>Automated compliance monitoring</span></li>
+                <li><i class="bi bi-dot"></i> <span>Real-time quality control systems</span></li>
+                <li><i class="bi bi-dot"></i> <span>Seamless audit management</span></li>
+              </ul>
+            </div>
           </div>
 
-          <div class="row g-4 mt-5">
-            <!-- First Leader -->
-            <div class="col-lg-6">
-              <div class="leader-card">
-                <div class="leader-image">
-                  <div class="image-container">
-                    <div class="animated-bg"></div>
-                    <div class="leader-overlay">
-                      <div class="social-links">
-                        <a href="https://www.linkedin.com/in/mohan-nalawade-379210244/?originalSubdomain=in" class="social-icon"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="leader-content">
-                  <h3>Mr. Mohan Narayan Nalawade</h3>
-                  <span class="position">CEO - Gen4Automation</span>
-                  <p>With over 15 years of diverse industry experience, he has specialized in fixturing, tooling, re-design, re-engineering, and automation, consistently delivering innovative and cost-effective manufacturing solutions. His commitment to operational excellence is evident through the successful implementation of critical systems, driving process efficiency and sustainable improvements across operations.</p>
-                </div>
+          <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+            <div class="pricing-item featured">
+              <div class="pricing-header">
+                <h3>Mobile-Friendly</h3>
               </div>
+              <ul>
+                <li><i class="bi bi-dot"></i> <span>Cross-platform mobile applications</span></li>
+                <li><i class="bi bi-dot"></i> <span>Real-time data access anywhere</span></li>
+                <li><i class="bi bi-dot"></i> <span>Intuitive user interface</span></li>
+                <li><i class="bi bi-dot"></i> <span>Offline functionality support</span></li>
+                <li><i class="bi bi-dot"></i> <span>Secure mobile authentication</span></li>
+              </ul>
             </div>
+          </div>
 
-            <!-- Second Leader -->
-            <div class="col-lg-6">
-              <div class="leader-card">
-                <div class="leader-image">
-                  <div class="image-container">
-                    <div class="animated-bg"></div>
-                    <div class="leader-overlay">
-                      <div class="social-links">
-                        <a href="https://www.linkedin.com/in/sagar-chougule-8068314a/" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="leader-content">
-                  <h3>Mr. Sagar Dilip Chougule</h3>
-                  <span class="position">CMO - ASD</span>
-                  <p>Bringing over 13 years of rich and versatile experience, he has led initiatives in new part and assembly development, greenfield plant establishment, capacity and capital planning, and automation project management. He has been instrumental in driving operational excellence through the deployment of critical systems such as IATF, OHSAS, IIoT, MES, and SCA, ensuring streamlined processes and sustainable growth.</p>
-                </div>
+          <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="600">
+            <div class="pricing-item">
+              <div class="pricing-header">
+                <h3>In-House Manufacturing</h3>
               </div>
+              <ul>
+                <li><i class="bi bi-dot"></i> <span>Custom panel development</span></li>
+                <li><i class="bi bi-dot"></i> <span>Precision tooling solutions</span></li>
+                <li><i class="bi bi-dot"></i> <span>Advanced fixturing systems</span></li>
+                <li><i class="bi bi-dot"></i> <span>Quality-controlled production</span></li>
+                <li><i class="bi bi-dot"></i> <span>Rapid prototyping capabilities</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+            <div class="pricing-item featured">
+              <div class="pricing-header">
+                <h3>Proven Automation</h3>
+              </div>
+              <ul>
+                <li><i class="bi bi-dot"></i> <span>Industry-leading automation solutions</span></li>
+                <li><i class="bi bi-dot"></i> <span>Custom automation systems</span></li>
+                <li><i class="bi bi-dot"></i> <span>Process optimization expertise</span></li>
+                <li><i class="bi bi-dot"></i> <span>Reliable performance metrics</span></li>
+                <li><i class="bi bi-dot"></i> <span>Continuous improvement focus</span></li>
+              </ul>
             </div>
           </div>
         </div>
-      </section>
 
-      <style>
+        <div class="row gy-4">
+          <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+            <div class="pricing-item">
+              <div class="pricing-header">
+                <h3>In-house Fabrication</h3>
+              </div>
+              <ul>
+                <li><i class="bi bi-dot"></i> <span>State-of-the-art fabrication facility</span></li>
+                <li><i class="bi bi-dot"></i> <span>Custom metal fabrication</span></li>
+                <li><i class="bi bi-dot"></i> <span>Precision machining services</span></li>
+                <li><i class="bi bi-dot"></i> <span>Quality control systems</span></li>
+                <li><i class="bi bi-dot"></i> <span>Rapid turnaround times</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+            <div class="pricing-item featured">
+              <div class="pricing-header">
+                <h3>Integrated Solutions</h3>
+              </div>
+              <ul>
+                <li><i class="bi bi-dot"></i> <span>End-to-end system integration</span></li>
+                <li><i class="bi bi-dot"></i> <span>Hardware-software synchronization</span></li>
+                <li><i class="bi bi-dot"></i> <span>Seamless data flow</span></li>
+                <li><i class="bi bi-dot"></i> <span>Unified control systems</span></li>
+                <li><i class="bi bi-dot"></i> <span>Comprehensive support</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="600">
+            <div class="pricing-item">
+              <div class="pricing-header">
+                <h3>Cost-Effective</h3>
+              </div>
+              <ul>
+                <li><i class="bi bi-dot"></i> <span>Affordable SaaS solutions</span></li>
+                <li><i class="bi bi-dot"></i> <span>Economical automation packages</span></li>
+                <li><i class="bi bi-dot"></i> <span>ROI-focused implementations</span></li>
+                <li><i class="bi bi-dot"></i> <span>Flexible pricing models</span></li>
+                <li><i class="bi bi-dot"></i> <span>Long-term cost savings</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+            <div class="pricing-item featured">
+              <div class="pricing-header">
+                <h3>Scalability</h3>
+              </div>
+              <ul>
+                <li><i class="bi bi-dot"></i> <span>Modular system architecture</span></li>
+                <li><i class="bi bi-dot"></i> <span>Flexible capacity planning</span></li>
+                <li><i class="bi bi-dot"></i> <span>Enterprise-wide solutions</span></li>
+                <li><i class="bi bi-dot"></i> <span>Growth-ready infrastructure</span></li>
+                <li><i class="bi bi-dot"></i> <span>Adaptable to business needs</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Pricing Section -->
+
+
+
+    <!-- ======= Call To Action Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-out">
+        <div class="section-header text-center">
+          <span class="badge bg-primary mb-3">Leadership Excellence</span>
+          <h2 class="mb-4">Meet Our Visionary Leaders</h2>
+          <p class="lead">
+            Our leadership team brings together decades of combined experience in automation, manufacturing, and
+            technology innovation, driving our mission to deliver cutting-edge solutions and sustainable growth.
+          </p>
+          <div class="title-separator"></div>
+        </div>
+
+        <div class="row g-4 mt-5">
+          <!-- First Leader -->
+          <div class="col-lg-6">
+            <div class="leader-card">
+              <div class="leader-image">
+                <div class="image-container">
+                  <div class="animated-bg"></div>
+                  <div class="leader-overlay">
+                    <div class="social-links">
+                      <a href="https://www.linkedin.com/in/mohan-nalawade-379210244/?originalSubdomain=in"
+                        class="social-icon"><i class="bi bi-linkedin"></i></a>
+                      <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="leader-content">
+                <h3>Mr. Mohan Narayan Nalawade</h3>
+                <span class="position">CEO - Gen4Automation</span>
+                <p>With over 15 years of diverse industry experience, he has specialized in fixturing, tooling,
+                  re-design, re-engineering, and automation, consistently delivering innovative and cost-effective
+                  manufacturing solutions. His commitment to operational excellence is evident through the successful
+                  implementation of critical systems, driving process efficiency and sustainable improvements across
+                  operations.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Leader -->
+          <div class="col-lg-6">
+            <div class="leader-card">
+              <div class="leader-image">
+                <div class="image-container">
+                  <div class="animated-bg"></div>
+                  <div class="leader-overlay">
+                    <div class="social-links">
+                      <a href="https://www.linkedin.com/in/sagar-chougule-8068314a/" class="social-icon" target="_blank"
+                        rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+                      <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="leader-content">
+                <h3>Mr. Sagar Dilip Chougule</h3>
+                <span class="position">CMO - ASD</span>
+                <p>Bringing over 13 years of rich and versatile experience, he has led initiatives in new part and
+                  assembly development, greenfield plant establishment, capacity and capital planning, and automation
+                  project management. He has been instrumental in driving operational excellence through the deployment
+                  of critical systems such as IATF, OHSAS, IIoT, MES, and SCA, ensuring streamlined processes and
+                  sustainable growth.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <style>
       .cta {
         padding: 80px 0;
         background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -1490,49 +1570,40 @@
           font-size: 1.3rem;
         }
       }
-      </style>
+      </style> -->
 
-      <!-- ======= Clients Section ======= -->
-      <section id="clients" class="clients">
-        <div class="container" data-aos="zoom-out">
-          <div class="section-header">
-            <h2>Major clients</h2>
-
-          </div>
-
-
-          <div class="clients-slider swiper">
-
-            <div class="swiper-wrapper align-items-center">
-              <div class="swiper-slide"><img src="assets/img/clients/aam.png"
-                  class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/dana.png"
-                  class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/download.jpg"
-                  class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/exide.png"
-                  class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/mat.jpg"
-                  class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/pari.png"
-                  class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/sgs.png"
-                  class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/tata.jpg"
-                  class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/wipro.png"
-                  class="img-fluid" alt=""></div>
-              
-
-
-
-
-
-            </div>
-          </div>
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+      <div class="container" data-aos="zoom-out">
+        <div class="section-header">
+          <h2>Major clients</h2>
 
         </div>
-      </section><!-- End Clients Section -->
+
+
+        <div class="clients-slider swiper">
+
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/aam.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/dana.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/download.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/exide.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/mat.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/pari.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/sgs.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/tata.jpg" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/wipro.png" class="img-fluid" alt=""></div>
+
+
+
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
 
 
 
@@ -1540,7 +1611,7 @@
 
 
 
-        <!-- ======= Testimonials Section ======= -->
+    <!-- ======= Testimonials Section ======= -->
 
 
 
@@ -1549,8 +1620,8 @@
 
 
 
-        <!-- ======= F.A.Q Section ======= -->
-        <!-- End F.A.Q Section -->
+    <!-- ======= F.A.Q Section ======= -->
+    <!-- End F.A.Q Section -->
 
 
 
@@ -1563,17 +1634,22 @@
           <p>ASD Support System Pvt. Ltd.</p>
           <p>D-403 , Singature 2, internal road, Sanand road, Sarkhej, Ahmedabad, Gujarat 382210</p>
           <p>SOM PRECISION</p>
-          <p>Gat No102, Nigdi, Talawade Rd, near Jyotiba Temple, behind Jhunka hotel, Jyotiba Nagar, Talwade, Pune, Maharashtra 412114</p>
+          <p>Gat No102, Nigdi, Talawade Rd, near Jyotiba Temple, behind Jhunka hotel, Jyotiba Nagar, Talwade, Pune,
+            Maharashtra 412114</p>
         </div>
 
         <div class="row map">
           <div class="col-lg-6 mb-4">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.978043146068!2d72.49057517531284!3d22.98783487919813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9bd9afcd3d87%3A0x19edb879c9e8d668!2sASD%20Support%20System%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1749878533822!5m2!1sen!2sin" 
-              width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.978043146068!2d72.49057517531284!3d22.98783487919813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9bd9afcd3d87%3A0x19edb879c9e8d668!2sASD%20Support%20System%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1749878533822!5m2!1sen!2sin"
+              width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="col-lg-6 mb-4">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.5632104399583!2d73.790212!3d18.683586599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b7936188a58b%3A0x3cb09a3acc0491a0!2sSOM%20PRECISION!5e0!3m2!1sen!2sin!4v1749879385292!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3779.5632104399583!2d73.790212!3d18.683586599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b7936188a58b%3A0x3cb09a3acc0491a0!2sSOM%20PRECISION!5e0!3m2!1sen!2sin!4v1749879385292!5m2!1sen!2sin"
+              width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
 
@@ -1581,13 +1657,16 @@
           <div class="col-md-4 mb-3">
             <div class="card h-100 border-0 shadow-sm rounded-4">
               <div class="card-body p-4">
-                <h5 class="mb-4 text-primary"><i class="bi bi-building me-2"></i>ASD Support System Pvt. Ltd. <br> Gen4Automation /Som precision</h5>
+                <h5 class="mb-4 text-primary"><i class="bi bi-building me-2"></i>ASD Support System Pvt. Ltd. <br>
+                  Gen4Automation /Som precision</h5>
                 <div class="contact-details">
                   <div class="mb-4">
                     <h6 class="text-secondary mb-2"><i class="bi bi-envelope me-2"></i>Email Address</h6>
                     <div class="ms-4">
-                      <p class="mb-2"><a href="mailto:sales@asdsoftwares.com" class="text-decoration-none">sales@asdsoftwares.com</a></p>
-                      <p class="mb-0"><a href="mailto:gen4automations@gmail.com" class="text-decoration-none">gen4automations@gmail.com</a></p>
+                      <p class="mb-2"><a href="mailto:sales@asdsoftwares.com"
+                          class="text-decoration-none">sales@asdsoftwares.com</a></p>
+                      <p class="mb-0"><a href="mailto:gen4automations@gmail.com"
+                          class="text-decoration-none">gen4automations@gmail.com</a></p>
                     </div>
                   </div>
                   <div>
@@ -1606,40 +1685,40 @@
             <div class="card h-100 border-0 shadow-sm rounded-4">
               <div class="card-body">
                 <div class="row justify-content-center mt-5">
-                  
-                    <form action="https://formspree.io/f/mvgazzna" method="POST">
-                      <div class="mb-3">
-                        <label for="name" class="form-label">Name:</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                      </div>
-                      <div class="mb-3">
-                        <label for="company" class="form-label">Company Name:</label>
-                        <input type="text" class="form-control" id="company" name="company" required>
-                      </div>
-                      <div class="mb-3">
-                        <label for="email" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                      </div>
-                      <div class="mb-3">
-                        <label for="phone" class="form-label">Contact Number:</label>
-                        <input type="tel" class="form-control" id="phone" name="phone" required>
-                      </div>
-                      <div class="mb-3">
-                        <label for="message" class="form-label">Message:</label>
-                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                      </div>
-                      <div class="text-center">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                      </div>
-                    </form>
-                  
-                </div> 
+
+                  <form action="https://formspree.io/f/mvgazzna" method="POST">
+                    <div class="mb-3">
+                      <label for="name" class="form-label">Name:</label>
+                      <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="company" class="form-label">Company Name:</label>
+                      <input type="text" class="form-control" id="company" name="company" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email:</label>
+                      <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="phone" class="form-label">Contact Number:</label>
+                      <input type="tel" class="form-control" id="phone" name="phone" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="message" class="form-label">Message:</label>
+                      <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                  </form>
+
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <style>
+        <!-- <style>
         .contact-info-row {
           background: linear-gradient(90deg, #f8fafc 60%, #e9ecef 100%);
         }
@@ -1664,9 +1743,9 @@
         .contact-details p {
           font-size: 0.9rem;
         }
-        </style>
+        </style> -->
 
-        
+
 
       </div>
     </section>
@@ -1720,7 +1799,7 @@
               <p>
                 D-403 , Singature 2, internal road, Sanand road, Sarkhej, Ahmedabad, Gujarat 382210<br><br>
                 <strong>Phone:</strong> +91 8888293019<br>
-                <strong>Email:</strong>+sales@asdsoftwares.com 
+                <strong>Email:</strong>+sales@asdsoftwares.com
                 <br>
               </p>
               <!-- <form action="" method="post">
@@ -1742,7 +1821,7 @@
               &copy; Copyright <strong><span>ASD Support System</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
-            
+
               <a href="https://bootstrapmade.com/"></a>
             </div>
           </div>
@@ -1775,8 +1854,8 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
